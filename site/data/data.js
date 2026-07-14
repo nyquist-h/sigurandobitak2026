@@ -1707,21 +1707,303 @@ window.KICKTIPP = {
     "R7_Terminator": 0.0
   },
   "accuracy": {
-    "Dzeko007": {
-      "exact": 14,
-      "exact_draw": 1,
-      "winner_plus_diff": 14,
+    "Vrbica": {
+      "exact": 10,
+      "exact_draw": 3,
+      "winner_plus_diff": 9,
       "draw_pred_no_exact": 3,
       "correct_winner": 35,
-      "missed": 25,
-      "total_predicted": 91,
-      "total_played": 91,
+      "missed": 41,
+      "total_predicted": 98,
+      "total_played": 98,
       "four_pointers": [
+        {
+          "match": "KOR - CZE",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md1"
+        },
+        {
+          "match": "CAN - BIH",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
+        {
+          "match": "FRA - SEN",
+          "predicted": "3:1",
+          "actual": "3:1",
+          "stage": "md3"
+        },
+        {
+          "match": "BRA - HAI",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md4"
+        },
+        {
+          "match": "ESP - KSA",
+          "predicted": "4:0",
+          "actual": "4:0",
+          "stage": "md5"
+        },
+        {
+          "match": "NZL - EGY",
+          "predicted": "1:3",
+          "actual": "1:3",
+          "stage": "md5"
+        },
+        {
+          "match": "NED - MAR",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "r32"
+        },
+        {
+          "match": "CIV - NOR",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "r32"
+        },
+        {
+          "match": "MEX - ECU",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "r32"
+        },
+        {
+          "match": "AUS - EGY",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "r32"
+        }
+      ]
+    },
+    "ML10": {
+      "exact": 16,
+      "exact_draw": 5,
+      "winner_plus_diff": 10,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 26,
+      "missed": 44,
+      "total_predicted": 100,
+      "total_played": 100,
+      "four_pointers": [
+        {
+          "match": "CAN - BIH",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
+        {
+          "match": "BRA - MAR",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
+        {
+          "match": "HAI - SCO",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md1"
+        },
         {
           "match": "PAN - ENG",
           "predicted": "0:2",
           "actual": "0:2",
+          "stage": "md10"
+        },
+        {
+          "match": "FRA - SEN",
+          "predicted": "3:1",
+          "actual": "3:1",
+          "stage": "md3"
+        },
+        {
+          "match": "SCO - MAR",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md4"
+        },
+        {
+          "match": "BRA - HAI",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md4"
+        },
+        {
+          "match": "FRA - IRQ",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md6"
+        },
+        {
+          "match": "JPN - SWE",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md8"
+        },
+        {
+          "match": "URU - ESP",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md9"
+        },
+        {
+          "match": "NOR - ENG",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "qf"
+        },
+        {
+          "match": "POR - ESP",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "r16"
+        },
+        {
+          "match": "BRA - JPN",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "r32"
+        },
+        {
+          "match": "NED - MAR",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "r32"
+        },
+        {
+          "match": "MEX - ECU",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "r32"
+        },
+        {
+          "match": "AUS - EGY",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "r32"
+        }
+      ]
+    },
+    "BetMGM": {
+      "exact": 13,
+      "exact_draw": 3,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 2,
+      "correct_winner": 36,
+      "missed": 35,
+      "total_predicted": 100,
+      "total_played": 100,
+      "four_pointers": [
+        {
+          "match": "MEX - RSA",
+          "predicted": "2:0",
+          "actual": "2:0",
           "stage": "md1"
+        },
+        {
+          "match": "CAN - BIH",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
+        {
+          "match": "AUT - JOR",
+          "predicted": "3:1",
+          "actual": "3:1",
+          "stage": "md3"
+        },
+        {
+          "match": "USA - AUS",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md4"
+        },
+        {
+          "match": "JOR - ALG",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "md6"
+        },
+        {
+          "match": "SUI - CAN",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md7"
+        },
+        {
+          "match": "JPN - SWE",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md8"
+        },
+        {
+          "match": "PAR - AUS",
+          "predicted": "0:0",
+          "actual": "0:0",
+          "stage": "md8"
+        },
+        {
+          "match": "FRA - MAR",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "qf"
+        },
+        {
+          "match": "POR - ESP",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "r16"
+        },
+        {
+          "match": "BRA - JPN",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "r32"
+        },
+        {
+          "match": "CIV - NOR",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "r32"
+        },
+        {
+          "match": "MEX - ECU",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "r32"
+        }
+      ]
+    },
+    "Dzeko007": {
+      "exact": 16,
+      "exact_draw": 2,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 3,
+      "correct_winner": 37,
+      "missed": 29,
+      "total_predicted": 99,
+      "total_played": 99,
+      "four_pointers": [
+        {
+          "match": "CAN - BIH",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
+        {
+          "match": "HAI - SCO",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md1"
+        },
+        {
+          "match": "PAN - ENG",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md10"
         },
         {
           "match": "GHA - PAN",
@@ -1803,32 +2085,56 @@ window.KICKTIPP = {
         }
       ]
     },
-    "BetMGM": {
-      "exact": 11,
-      "exact_draw": 2,
-      "winner_plus_diff": 14,
-      "draw_pred_no_exact": 2,
-      "correct_winner": 34,
-      "missed": 31,
-      "total_predicted": 92,
-      "total_played": 92,
+    "kristian0s": {
+      "exact": 9,
+      "exact_draw": 0,
+      "winner_plus_diff": 7,
+      "draw_pred_no_exact": 5,
+      "correct_winner": 40,
+      "missed": 35,
+      "total_predicted": 96,
+      "total_played": 96,
       "four_pointers": [
         {
-          "match": "AUT - JOR",
-          "predicted": "3:1",
-          "actual": "3:1",
+          "match": "MEX - RSA",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md1"
+        },
+        {
+          "match": "KOR - CZE",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md1"
+        },
+        {
+          "match": "CRO - GHA",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md10"
+        },
+        {
+          "match": "ARG - ALG",
+          "predicted": "3:0",
+          "actual": "3:0",
           "stage": "md3"
         },
         {
-          "match": "USA - AUS",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "md4"
+          "match": "ESP - KSA",
+          "predicted": "4:0",
+          "actual": "4:0",
+          "stage": "md5"
         },
         {
-          "match": "JOR - ALG",
-          "predicted": "1:2",
-          "actual": "1:2",
+          "match": "ARG - AUT",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md6"
+        },
+        {
+          "match": "FRA - IRQ",
+          "predicted": "3:0",
+          "actual": "3:0",
           "stage": "md6"
         },
         {
@@ -1838,39 +2144,75 @@ window.KICKTIPP = {
           "stage": "md7"
         },
         {
+          "match": "CIV - NOR",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "r32"
+        }
+      ]
+    },
+    "Bajica": {
+      "exact": 12,
+      "exact_draw": 3,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 42,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101,
+      "four_pointers": [
+        {
+          "match": "MEX - RSA",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md1"
+        },
+        {
+          "match": "PAN - ENG",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md10"
+        },
+        {
+          "match": "CIV - ECU",
+          "predicted": "1:0",
+          "actual": "1:0",
+          "stage": "md2"
+        },
+        {
+          "match": "ARG - AUT",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md6"
+        },
+        {
+          "match": "COL - COD",
+          "predicted": "1:0",
+          "actual": "1:0",
+          "stage": "md6"
+        },
+        {
+          "match": "CUW - CIV",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md8"
+        },
+        {
           "match": "JPN - SWE",
           "predicted": "1:1",
           "actual": "1:1",
           "stage": "md8"
         },
         {
-          "match": "PAR - AUS",
-          "predicted": "0:0",
-          "actual": "0:0",
-          "stage": "md8"
-        },
-        {
-          "match": "FRA - MAR",
-          "predicted": "2:0",
-          "actual": "2:0",
+          "match": "ESP - BEL",
+          "predicted": "2:1",
+          "actual": "2:1",
           "stage": "qf"
         },
         {
-          "match": "POR - ESP",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "r16"
-        },
-        {
-          "match": "BRA - JPN",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "r32"
-        },
-        {
-          "match": "CIV - NOR",
-          "predicted": "1:2",
-          "actual": "1:2",
+          "match": "NED - MAR",
+          "predicted": "1:1",
+          "actual": "1:1",
           "stage": "r32"
         },
         {
@@ -1878,30 +2220,48 @@ window.KICKTIPP = {
           "predicted": "2:0",
           "actual": "2:0",
           "stage": "r32"
+        },
+        {
+          "match": "SUI - ALG",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "r32"
+        },
+        {
+          "match": "AUS - EGY",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "r32"
         }
       ]
     },
     "Nakamura": {
-      "exact": 10,
+      "exact": 11,
       "exact_draw": 3,
-      "winner_plus_diff": 7,
+      "winner_plus_diff": 8,
       "draw_pred_no_exact": 4,
-      "correct_winner": 40,
-      "missed": 31,
-      "total_predicted": 92,
-      "total_played": 92,
+      "correct_winner": 41,
+      "missed": 36,
+      "total_predicted": 100,
+      "total_played": 100,
       "four_pointers": [
+        {
+          "match": "MEX - RSA",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md1"
+        },
         {
           "match": "PAN - ENG",
           "predicted": "0:2",
           "actual": "0:2",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "COL - POR",
           "predicted": "0:0",
           "actual": "0:0",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "MEX - KOR",
@@ -1953,56 +2313,56 @@ window.KICKTIPP = {
         }
       ]
     },
-    "AiAiAi": {
-      "exact": 12,
-      "exact_draw": 1,
-      "winner_plus_diff": 13,
-      "draw_pred_no_exact": 4,
+    "Nacelnik": {
+      "exact": 11,
+      "exact_draw": 2,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 5,
       "correct_winner": 32,
-      "missed": 32,
-      "total_predicted": 93,
-      "total_played": 93,
+      "missed": 48,
+      "total_predicted": 101,
+      "total_played": 101,
       "four_pointers": [
         {
-          "match": "PAN - ENG",
-          "predicted": "0:2",
-          "actual": "0:2",
+          "match": "HAI - SCO",
+          "predicted": "0:1",
+          "actual": "0:1",
           "stage": "md1"
         },
         {
-          "match": "ARG - ALG",
+          "match": "CRO - GHA",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md10"
+        },
+        {
+          "match": "SCO - MAR",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md4"
+        },
+        {
+          "match": "BRA - HAI",
           "predicted": "3:0",
           "actual": "3:0",
-          "stage": "md3"
+          "stage": "md4"
         },
         {
-          "match": "ARG - AUT",
-          "predicted": "2:0",
-          "actual": "2:0",
+          "match": "COL - COD",
+          "predicted": "1:0",
+          "actual": "1:0",
           "stage": "md6"
         },
         {
-          "match": "FRA - IRQ",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md6"
+          "match": "SUI - CAN",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md7"
         },
         {
-          "match": "JOR - ALG",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "md6"
-        },
-        {
-          "match": "CUW - CIV",
-          "predicted": "0:2",
-          "actual": "0:2",
-          "stage": "md8"
-        },
-        {
-          "match": "TUN - NED",
-          "predicted": "1:3",
-          "actual": "1:3",
+          "match": "JPN - SWE",
+          "predicted": "1:1",
+          "actual": "1:1",
           "stage": "md8"
         },
         {
@@ -2018,106 +2378,40 @@ window.KICKTIPP = {
           "stage": "qf"
         },
         {
-          "match": "NOR - ENG",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "qf"
-        },
-        {
-          "match": "CIV - NOR",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "r32"
-        },
-        {
-          "match": "POR - CRO",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "r32"
-        }
-      ]
-    },
-    "Dario": {
-      "exact": 9,
-      "exact_draw": 1,
-      "winner_plus_diff": 11,
-      "draw_pred_no_exact": 5,
-      "correct_winner": 37,
-      "missed": 31,
-      "total_predicted": 93,
-      "total_played": 93,
-      "four_pointers": [
-        {
-          "match": "CRO - GHA",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md1"
-        },
-        {
-          "match": "PAN - ENG",
-          "predicted": "0:2",
-          "actual": "0:2",
-          "stage": "md1"
-        },
-        {
-          "match": "FRA - SEN",
-          "predicted": "3:1",
-          "actual": "3:1",
-          "stage": "md3"
-        },
-        {
-          "match": "GER - CIV",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md5"
-        },
-        {
-          "match": "ESP - KSA",
-          "predicted": "4:0",
-          "actual": "4:0",
-          "stage": "md5"
-        },
-        {
-          "match": "NZL - EGY",
-          "predicted": "1:3",
-          "actual": "1:3",
-          "stage": "md5"
-        },
-        {
-          "match": "JOR - ALG",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "md6"
-        },
-        {
           "match": "BRA - JPN",
           "predicted": "2:1",
           "actual": "2:1",
           "stage": "r32"
         },
         {
-          "match": "NED - MAR",
-          "predicted": "1:1",
-          "actual": "1:1",
+          "match": "SUI - ALG",
+          "predicted": "2:0",
+          "actual": "2:0",
           "stage": "r32"
         }
       ]
     },
     "Zoki": {
-      "exact": 13,
+      "exact": 14,
       "exact_draw": 2,
       "winner_plus_diff": 11,
       "draw_pred_no_exact": 4,
-      "correct_winner": 35,
-      "missed": 30,
-      "total_predicted": 93,
-      "total_played": 93,
+      "correct_winner": 37,
+      "missed": 35,
+      "total_predicted": 101,
+      "total_played": 101,
       "four_pointers": [
+        {
+          "match": "MEX - RSA",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md1"
+        },
         {
           "match": "CRO - GHA",
           "predicted": "2:1",
           "actual": "2:1",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "ARG - ALG",
@@ -2193,273 +2487,27 @@ window.KICKTIPP = {
         }
       ]
     },
-    "Tadija": {
-      "exact": 8,
-      "exact_draw": 2,
-      "winner_plus_diff": 12,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 36,
-      "missed": 33,
-      "total_predicted": 93,
-      "total_played": 93,
-      "four_pointers": [
-        {
-          "match": "PAN - ENG",
-          "predicted": "0:2",
-          "actual": "0:2",
-          "stage": "md1"
-        },
-        {
-          "match": "NED - JPN",
-          "predicted": "2:2",
-          "actual": "2:2",
-          "stage": "md2"
-        },
-        {
-          "match": "BRA - HAI",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md4"
-        },
-        {
-          "match": "URU - ESP",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "md9"
-        },
-        {
-          "match": "ESP - BEL",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "qf"
-        },
-        {
-          "match": "NED - MAR",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "r32"
-        },
-        {
-          "match": "CIV - NOR",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "r32"
-        },
-        {
-          "match": "COL - GHA",
-          "predicted": "1:0",
-          "actual": "1:0",
-          "stage": "r32"
-        }
-      ]
-    },
-    "kristian0s": {
-      "exact": 7,
-      "exact_draw": 0,
-      "winner_plus_diff": 7,
-      "draw_pred_no_exact": 5,
-      "correct_winner": 38,
-      "missed": 31,
-      "total_predicted": 88,
-      "total_played": 88,
-      "four_pointers": [
-        {
-          "match": "CRO - GHA",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md1"
-        },
-        {
-          "match": "ARG - ALG",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md3"
-        },
-        {
-          "match": "ESP - KSA",
-          "predicted": "4:0",
-          "actual": "4:0",
-          "stage": "md5"
-        },
-        {
-          "match": "ARG - AUT",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "md6"
-        },
-        {
-          "match": "FRA - IRQ",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md6"
-        },
-        {
-          "match": "SUI - CAN",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md7"
-        },
-        {
-          "match": "CIV - NOR",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "r32"
-        }
-      ]
-    },
-    "Bajica": {
-      "exact": 11,
-      "exact_draw": 3,
-      "winner_plus_diff": 4,
-      "draw_pred_no_exact": 3,
-      "correct_winner": 42,
-      "missed": 33,
-      "total_predicted": 93,
-      "total_played": 93,
-      "four_pointers": [
-        {
-          "match": "PAN - ENG",
-          "predicted": "0:2",
-          "actual": "0:2",
-          "stage": "md1"
-        },
-        {
-          "match": "CIV - ECU",
-          "predicted": "1:0",
-          "actual": "1:0",
-          "stage": "md2"
-        },
-        {
-          "match": "ARG - AUT",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "md6"
-        },
-        {
-          "match": "COL - COD",
-          "predicted": "1:0",
-          "actual": "1:0",
-          "stage": "md6"
-        },
-        {
-          "match": "CUW - CIV",
-          "predicted": "0:2",
-          "actual": "0:2",
-          "stage": "md8"
-        },
-        {
-          "match": "JPN - SWE",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "md8"
-        },
-        {
-          "match": "ESP - BEL",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "qf"
-        },
-        {
-          "match": "NED - MAR",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "r32"
-        },
-        {
-          "match": "MEX - ECU",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "r32"
-        },
-        {
-          "match": "SUI - ALG",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "r32"
-        },
-        {
-          "match": "AUS - EGY",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "r32"
-        }
-      ]
-    },
-    "Vrbica": {
-      "exact": 8,
-      "exact_draw": 2,
-      "winner_plus_diff": 8,
-      "draw_pred_no_exact": 3,
-      "correct_winner": 33,
-      "missed": 38,
-      "total_predicted": 90,
-      "total_played": 90,
-      "four_pointers": [
-        {
-          "match": "FRA - SEN",
-          "predicted": "3:1",
-          "actual": "3:1",
-          "stage": "md3"
-        },
-        {
-          "match": "BRA - HAI",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md4"
-        },
-        {
-          "match": "ESP - KSA",
-          "predicted": "4:0",
-          "actual": "4:0",
-          "stage": "md5"
-        },
-        {
-          "match": "NZL - EGY",
-          "predicted": "1:3",
-          "actual": "1:3",
-          "stage": "md5"
-        },
-        {
-          "match": "NED - MAR",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "r32"
-        },
-        {
-          "match": "CIV - NOR",
-          "predicted": "1:2",
-          "actual": "1:2",
-          "stage": "r32"
-        },
-        {
-          "match": "MEX - ECU",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "r32"
-        },
-        {
-          "match": "AUS - EGY",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "r32"
-        }
-      ]
-    },
     "Jigglypuff": {
-      "exact": 9,
-      "exact_draw": 1,
+      "exact": 10,
+      "exact_draw": 2,
       "winner_plus_diff": 8,
       "draw_pred_no_exact": 4,
-      "correct_winner": 38,
-      "missed": 34,
-      "total_predicted": 93,
-      "total_played": 93,
+      "correct_winner": 40,
+      "missed": 39,
+      "total_predicted": 101,
+      "total_played": 101,
       "four_pointers": [
+        {
+          "match": "CAN - BIH",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md1"
+        },
         {
           "match": "CRO - GHA",
           "predicted": "2:1",
           "actual": "2:1",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "GHA - PAN",
@@ -2511,21 +2559,27 @@ window.KICKTIPP = {
         }
       ]
     },
-    "ML10": {
-      "exact": 13,
-      "exact_draw": 3,
-      "winner_plus_diff": 10,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 25,
-      "missed": 40,
-      "total_predicted": 92,
-      "total_played": 92,
+    "Dario": {
+      "exact": 9,
+      "exact_draw": 1,
+      "winner_plus_diff": 12,
+      "draw_pred_no_exact": 5,
+      "correct_winner": 39,
+      "missed": 36,
+      "total_predicted": 101,
+      "total_played": 101,
       "four_pointers": [
+        {
+          "match": "CRO - GHA",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md10"
+        },
         {
           "match": "PAN - ENG",
           "predicted": "0:2",
           "actual": "0:2",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "FRA - SEN",
@@ -2534,46 +2588,28 @@ window.KICKTIPP = {
           "stage": "md3"
         },
         {
-          "match": "SCO - MAR",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "md4"
+          "match": "GER - CIV",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "md5"
         },
         {
-          "match": "BRA - HAI",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md4"
+          "match": "ESP - KSA",
+          "predicted": "4:0",
+          "actual": "4:0",
+          "stage": "md5"
         },
         {
-          "match": "FRA - IRQ",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md6"
+          "match": "NZL - EGY",
+          "predicted": "1:3",
+          "actual": "1:3",
+          "stage": "md5"
         },
         {
-          "match": "JPN - SWE",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "md8"
-        },
-        {
-          "match": "URU - ESP",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "md9"
-        },
-        {
-          "match": "NOR - ENG",
+          "match": "JOR - ALG",
           "predicted": "1:2",
           "actual": "1:2",
-          "stage": "qf"
-        },
-        {
-          "match": "POR - ESP",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "r16"
+          "stage": "md6"
         },
         {
           "match": "BRA - JPN",
@@ -2586,17 +2622,155 @@ window.KICKTIPP = {
           "predicted": "1:1",
           "actual": "1:1",
           "stage": "r32"
-        },
+        }
+      ]
+    },
+    "AiAiAi": {
+      "exact": 13,
+      "exact_draw": 1,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 32,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101,
+      "four_pointers": [
         {
-          "match": "MEX - ECU",
+          "match": "MEX - RSA",
           "predicted": "2:0",
           "actual": "2:0",
+          "stage": "md1"
+        },
+        {
+          "match": "PAN - ENG",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md10"
+        },
+        {
+          "match": "ARG - ALG",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md3"
+        },
+        {
+          "match": "ARG - AUT",
+          "predicted": "2:0",
+          "actual": "2:0",
+          "stage": "md6"
+        },
+        {
+          "match": "FRA - IRQ",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md6"
+        },
+        {
+          "match": "JOR - ALG",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "md6"
+        },
+        {
+          "match": "CUW - CIV",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md8"
+        },
+        {
+          "match": "TUN - NED",
+          "predicted": "1:3",
+          "actual": "1:3",
+          "stage": "md8"
+        },
+        {
+          "match": "EGY - IRN",
+          "predicted": "1:1",
+          "actual": "1:1",
+          "stage": "md9"
+        },
+        {
+          "match": "ESP - BEL",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "qf"
+        },
+        {
+          "match": "NOR - ENG",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "qf"
+        },
+        {
+          "match": "CIV - NOR",
+          "predicted": "1:2",
+          "actual": "1:2",
           "stage": "r32"
         },
         {
-          "match": "AUS - EGY",
+          "match": "POR - CRO",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "r32"
+        }
+      ]
+    },
+    "Tadija": {
+      "exact": 8,
+      "exact_draw": 2,
+      "winner_plus_diff": 12,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 39,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101,
+      "four_pointers": [
+        {
+          "match": "PAN - ENG",
+          "predicted": "0:2",
+          "actual": "0:2",
+          "stage": "md10"
+        },
+        {
+          "match": "NED - JPN",
+          "predicted": "2:2",
+          "actual": "2:2",
+          "stage": "md2"
+        },
+        {
+          "match": "BRA - HAI",
+          "predicted": "3:0",
+          "actual": "3:0",
+          "stage": "md4"
+        },
+        {
+          "match": "URU - ESP",
+          "predicted": "0:1",
+          "actual": "0:1",
+          "stage": "md9"
+        },
+        {
+          "match": "ESP - BEL",
+          "predicted": "2:1",
+          "actual": "2:1",
+          "stage": "qf"
+        },
+        {
+          "match": "NED - MAR",
           "predicted": "1:1",
           "actual": "1:1",
+          "stage": "r32"
+        },
+        {
+          "match": "CIV - NOR",
+          "predicted": "1:2",
+          "actual": "1:2",
+          "stage": "r32"
+        },
+        {
+          "match": "COL - GHA",
+          "predicted": "1:0",
+          "actual": "1:0",
           "stage": "r32"
         }
       ]
@@ -2606,16 +2780,16 @@ window.KICKTIPP = {
       "exact_draw": 1,
       "winner_plus_diff": 15,
       "draw_pred_no_exact": 2,
-      "correct_winner": 29,
-      "missed": 39,
-      "total_predicted": 92,
-      "total_played": 92,
+      "correct_winner": 32,
+      "missed": 43,
+      "total_predicted": 99,
+      "total_played": 99,
       "four_pointers": [
         {
           "match": "CRO - GHA",
           "predicted": "2:1",
           "actual": "2:1",
-          "stage": "md1"
+          "stage": "md10"
         },
         {
           "match": "FRA - SEN",
@@ -2655,87 +2829,15 @@ window.KICKTIPP = {
         }
       ]
     },
-    "Nacelnik": {
-      "exact": 10,
-      "exact_draw": 2,
-      "winner_plus_diff": 4,
-      "draw_pred_no_exact": 5,
-      "correct_winner": 31,
-      "missed": 43,
-      "total_predicted": 93,
-      "total_played": 93,
-      "four_pointers": [
-        {
-          "match": "CRO - GHA",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md1"
-        },
-        {
-          "match": "SCO - MAR",
-          "predicted": "0:1",
-          "actual": "0:1",
-          "stage": "md4"
-        },
-        {
-          "match": "BRA - HAI",
-          "predicted": "3:0",
-          "actual": "3:0",
-          "stage": "md4"
-        },
-        {
-          "match": "COL - COD",
-          "predicted": "1:0",
-          "actual": "1:0",
-          "stage": "md6"
-        },
-        {
-          "match": "SUI - CAN",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "md7"
-        },
-        {
-          "match": "JPN - SWE",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "md8"
-        },
-        {
-          "match": "EGY - IRN",
-          "predicted": "1:1",
-          "actual": "1:1",
-          "stage": "md9"
-        },
-        {
-          "match": "ESP - BEL",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "qf"
-        },
-        {
-          "match": "BRA - JPN",
-          "predicted": "2:1",
-          "actual": "2:1",
-          "stage": "r32"
-        },
-        {
-          "match": "SUI - ALG",
-          "predicted": "2:0",
-          "actual": "2:0",
-          "stage": "r32"
-        }
-      ]
-    },
     "R7_Terminator": {
       "exact": 2,
       "exact_draw": 0,
       "winner_plus_diff": 5,
       "draw_pred_no_exact": 2,
-      "correct_winner": 28,
-      "missed": 19,
-      "total_predicted": 56,
-      "total_played": 56,
+      "correct_winner": 31,
+      "missed": 23,
+      "total_predicted": 63,
+      "total_played": 63,
       "four_pointers": [
         {
           "match": "CUW - CIV",
@@ -4802,5 +4904,5 @@ window.KICKTIPP = {
     ],
     "wc_winner": "ESP"
   },
-  "export_date": "2026-07-15T00:33:15.978641"
+  "export_date": "2026-07-15T00:35:40.710254"
 };

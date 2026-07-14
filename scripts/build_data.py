@@ -111,7 +111,7 @@ def filename_to_stage(filename: str) -> str | None:
         return "leaderboard"
     if "bonus" in fn:
         return "bonus"
-    for i in range(1, 11):
+    for i in range(10, 0, -1):
         if f"matchday {i}" in fn:
             return f"md{i}"
     if "sixteenth final" in fn:
