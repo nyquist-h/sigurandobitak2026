@@ -4889,5 +4889,5 @@ window.KICKTIPP = {
     ],
     "wc_winner": "ESP"
   },
-  "export_date": "2026-07-15T00:45:51.750467"
+  "export_date": "2026-07-15T00:46:25.285743"
 };
