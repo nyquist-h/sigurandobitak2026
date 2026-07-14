@@ -1713,9 +1713,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 14,
       "draw_pred_no_exact": 3,
       "correct_winner": 35,
-      "missed": 24,
+      "missed": 25,
       "total_predicted": 91,
-      "total_played": 90,
+      "total_played": 91,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -1809,9 +1809,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 14,
       "draw_pred_no_exact": 2,
       "correct_winner": 34,
-      "missed": 30,
+      "missed": 31,
       "total_predicted": 92,
-      "total_played": 91,
+      "total_played": 92,
       "four_pointers": [
         {
           "match": "AUT - JOR",
@@ -1887,9 +1887,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 7,
       "draw_pred_no_exact": 4,
       "correct_winner": 40,
-      "missed": 30,
+      "missed": 31,
       "total_predicted": 92,
-      "total_played": 91,
+      "total_played": 92,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -1959,9 +1959,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 13,
       "draw_pred_no_exact": 4,
       "correct_winner": 32,
-      "missed": 31,
+      "missed": 32,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -2043,9 +2043,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 11,
       "draw_pred_no_exact": 5,
       "correct_winner": 37,
-      "missed": 30,
+      "missed": 31,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2109,9 +2109,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 11,
       "draw_pred_no_exact": 4,
       "correct_winner": 35,
-      "missed": 29,
+      "missed": 30,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2199,9 +2199,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 12,
       "draw_pred_no_exact": 4,
       "correct_winner": 36,
-      "missed": 32,
+      "missed": 33,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -2259,9 +2259,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 7,
       "draw_pred_no_exact": 5,
       "correct_winner": 38,
-      "missed": 30,
+      "missed": 31,
       "total_predicted": 88,
-      "total_played": 87,
+      "total_played": 88,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2313,9 +2313,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 4,
       "draw_pred_no_exact": 3,
       "correct_winner": 42,
-      "missed": 32,
+      "missed": 33,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -2391,9 +2391,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 8,
       "draw_pred_no_exact": 3,
       "correct_winner": 33,
-      "missed": 37,
+      "missed": 38,
       "total_predicted": 90,
-      "total_played": 89,
+      "total_played": 90,
       "four_pointers": [
         {
           "match": "FRA - SEN",
@@ -2451,9 +2451,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 8,
       "draw_pred_no_exact": 4,
       "correct_winner": 38,
-      "missed": 33,
+      "missed": 34,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2517,9 +2517,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 10,
       "draw_pred_no_exact": 4,
       "correct_winner": 25,
-      "missed": 39,
+      "missed": 40,
       "total_predicted": 92,
-      "total_played": 91,
+      "total_played": 92,
       "four_pointers": [
         {
           "match": "PAN - ENG",
@@ -2606,10 +2606,10 @@ window.KICKTIPP = {
       "exact_draw": 1,
       "winner_plus_diff": 15,
       "draw_pred_no_exact": 2,
-      "correct_winner": 28,
+      "correct_winner": 29,
       "missed": 39,
       "total_predicted": 92,
-      "total_played": 91,
+      "total_played": 92,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2661,9 +2661,9 @@ window.KICKTIPP = {
       "winner_plus_diff": 4,
       "draw_pred_no_exact": 5,
       "correct_winner": 31,
-      "missed": 42,
+      "missed": 43,
       "total_predicted": 93,
-      "total_played": 92,
+      "total_played": 93,
       "four_pointers": [
         {
           "match": "CRO - GHA",
@@ -2834,590 +2834,590 @@ window.KICKTIPP = {
   "what_if": {
     "Dzeko007": {
       "current": 177,
-      "points_possible": 14,
-      "kicktipp_pending": 1,
-      "max_possible": 191,
+      "points_possible": 20,
+      "kicktipp_pending": 0,
+      "max_possible": 197,
       "status": "leading",
       "verdict": "Dzeko007 is currently leading with 177 points.",
       "above_users": []
     },
     "BetMGM": {
       "current": 169,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 193,
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 179,
       "status": "possible",
-      "verdict": "BetMGM can still earn up to 24 points. Dzeko007: 8 pts behind",
+      "verdict": "BetMGM can still earn up to 10 points. Dzeko007: 8 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         }
       ]
     },
     "Dario": {
       "current": 168,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 192,
+      "points_possible": 20,
+      "kicktipp_pending": 0,
+      "max_possible": 188,
       "status": "possible",
-      "verdict": "Dario can still earn up to 24 points. Dzeko007: 9 pts behind BetMGM: 1 pts behind",
+      "verdict": "Dario can still earn up to 20 points. Dzeko007: 9 pts behind BetMGM: 1 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         }
       ]
     },
     "AiAiAi": {
       "current": 165,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 189,
-      "status": "possible",
-      "verdict": "AiAiAi can still earn up to 24 points. Dzeko007: 12 pts behind BetMGM: 4 pts behind Dario: 3 pts behind",
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 175,
+      "status": "eliminated",
+      "verdict": "AiAiAi is eliminated. Max possible (175) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         }
       ]
     },
     "Zoki": {
       "current": 164,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 188,
+      "points_possible": 20,
+      "kicktipp_pending": 0,
+      "max_possible": 184,
       "status": "possible",
-      "verdict": "Zoki can still earn up to 24 points. Dzeko007: 13 pts behind BetMGM: 5 pts behind Dario: 4 pts behind AiAiAi: 1 pts behind",
+      "verdict": "Zoki can still earn up to 20 points. Dzeko007: 13 pts behind BetMGM: 5 pts behind Dario: 4 pts behind AiAiAi: 1 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         }
       ]
     },
     "Nakamura": {
       "current": 159,
-      "points_possible": 14,
-      "kicktipp_pending": 1,
-      "max_possible": 173,
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 169,
       "status": "eliminated",
-      "verdict": "Nakamura is eliminated. Max possible (173) cannot reach the leader (177).",
+      "verdict": "Nakamura is eliminated. Max possible (169) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         }
       ]
     },
     "Jigglypuff": {
       "current": 158,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 182,
-      "status": "possible",
-      "verdict": "Jigglypuff can still earn up to 24 points. Dzeko007: 19 pts behind BetMGM: 11 pts behind Dario: 10 pts behind AiAiAi: 7 pts behind Zoki: 6 pts behind Nakamura: 1 pts behind",
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 168,
+      "status": "eliminated",
+      "verdict": "Jigglypuff is eliminated. Max possible (168) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         }
       ]
     },
     "Bajica": {
       "current": 158,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 182,
-      "status": "possible",
-      "verdict": "Bajica can still earn up to 24 points. Dzeko007: 19 pts behind BetMGM: 11 pts behind Dario: 10 pts behind AiAiAi: 7 pts behind Zoki: 6 pts behind Nakamura: 1 pts behind",
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 168,
+      "status": "eliminated",
+      "verdict": "Bajica is eliminated. Max possible (168) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         }
       ]
     },
     "Tadija": {
       "current": 157,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 181,
-      "status": "possible",
-      "verdict": "Tadija can still earn up to 24 points. Dzeko007: 20 pts behind BetMGM: 12 pts behind Dario: 11 pts behind AiAiAi: 8 pts behind Zoki: 7 pts behind Nakamura: 2 pts behind Bajica: 1 pts behind Jigglypuff: 1 pts behind",
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 167,
+      "status": "eliminated",
+      "verdict": "Tadija is eliminated. Max possible (167) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         }
       ]
     },
     "kristian0s": {
       "current": 156,
-      "points_possible": 14,
-      "kicktipp_pending": 1,
-      "max_possible": 170,
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 166,
       "status": "eliminated",
-      "verdict": "kristian0s is eliminated. Max possible (170) cannot reach the leader (177).",
+      "verdict": "kristian0s is eliminated. Max possible (166) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         }
       ]
     },
     "Vrbica": {
       "current": 154,
-      "points_possible": 14,
-      "kicktipp_pending": 1,
-      "max_possible": 168,
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 164,
       "status": "eliminated",
-      "verdict": "Vrbica is eliminated. Max possible (168) cannot reach the leader (177).",
+      "verdict": "Vrbica is eliminated. Max possible (164) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "kristian0s",
           "current": 156,
-          "points_possible": 14
+          "points_possible": 10
         }
       ]
     },
     "ML10": {
       "current": 152,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 176,
+      "points_possible": 10,
+      "kicktipp_pending": 0,
+      "max_possible": 162,
       "status": "eliminated",
-      "verdict": "ML10 is eliminated. Max possible (176) cannot reach the leader (177).",
+      "verdict": "ML10 is eliminated. Max possible (162) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "kristian0s",
           "current": 156,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Vrbica",
           "current": 154,
-          "points_possible": 14
+          "points_possible": 10
         }
       ]
     },
     "ZloINaopako": {
       "current": 144,
-      "points_possible": 14,
-      "kicktipp_pending": 1,
-      "max_possible": 158,
+      "points_possible": 20,
+      "kicktipp_pending": 0,
+      "max_possible": 164,
       "status": "eliminated",
-      "verdict": "ZloINaopako is eliminated. Max possible (158) cannot reach the leader (177).",
+      "verdict": "ZloINaopako is eliminated. Max possible (164) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "kristian0s",
           "current": 156,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Vrbica",
           "current": 154,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "ML10",
           "current": 152,
-          "points_possible": 24
+          "points_possible": 10
         }
       ]
     },
     "Nacelnik": {
       "current": 140,
-      "points_possible": 24,
-      "kicktipp_pending": 1,
-      "max_possible": 164,
+      "points_possible": 20,
+      "kicktipp_pending": 0,
+      "max_possible": 160,
       "status": "eliminated",
-      "verdict": "Nacelnik is eliminated. Max possible (164) cannot reach the leader (177).",
+      "verdict": "Nacelnik is eliminated. Max possible (160) cannot reach the leader (177).",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "kristian0s",
           "current": 156,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Vrbica",
           "current": 154,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "ML10",
           "current": 152,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "ZloINaopako",
           "current": 144,
-          "points_possible": 14
+          "points_possible": 20
         }
       ]
     },
@@ -3432,72 +3432,72 @@ window.KICKTIPP = {
         {
           "user": "Dzeko007",
           "current": 177,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "BetMGM",
           "current": 169,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Dario",
           "current": 168,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "AiAiAi",
           "current": 165,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Zoki",
           "current": 164,
-          "points_possible": 24
+          "points_possible": 20
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Bajica",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "Tadija",
           "current": 157,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "kristian0s",
           "current": 156,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "Vrbica",
           "current": 154,
-          "points_possible": 14
+          "points_possible": 10
         },
         {
           "user": "ML10",
           "current": 152,
-          "points_possible": 24
+          "points_possible": 10
         },
         {
           "user": "ZloINaopako",
           "current": 144,
-          "points_possible": 14
+          "points_possible": 20
         },
         {
           "user": "Nacelnik",
           "current": 140,
-          "points_possible": 24
+          "points_possible": 20
         }
       ]
     }
@@ -4793,13 +4793,14 @@ window.KICKTIPP = {
   ],
   "results_meta": {
     "total_matches": 104,
-    "completed": 100,
-    "scheduled": 4,
-    "wc_winner_determined": false,
+    "completed": 101,
+    "scheduled": 3,
+    "wc_winner_determined": true,
     "top_scorer_names": [
       "Lionel Andrés Messi",
       "Kylian Mbappe"
-    ]
+    ],
+    "wc_winner": "ESP"
   },
-  "export_date": "2026-07-15T00:03:34.620327"
+  "export_date": "2026-07-15T00:27:45.833507"
 };

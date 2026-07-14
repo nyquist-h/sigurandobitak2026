@@ -1,6 +1,6 @@
 {
   "source": "https://github.com/mominullptr/FIFA-World-Cup-2026-Dataset",
-  "scraped_at": "2026-07-14T23:15:05.990727",
+  "scraped_at": "2026-07-15T00:27:45.827991",
   "matches": {
     "MEX - RSA": {
       "home": "MEX",
@@ -1001,53 +1001,99 @@
       "stage": "Quarter-finals",
       "date": "2026-07-12",
       "result_type": "AET"
+    },
+    "FRA - ESP": {
+      "home": "FRA",
+      "away": "ESP",
+      "hg": 0,
+      "ag": 2,
+      "played": true,
+      "stage": "Semi-finals",
+      "date": "2026-07-14",
+      "result_type": "Regular"
     }
   },
   "top_scorers": [
     {
       "name": "Kylian Mbappe",
+      "country_name": "France",
+      "country_code": "FRA",
+      "flag": "🇫🇷",
       "goals": 8
     },
     {
       "name": "Lionel Andrés Messi",
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "flag": "🇦🇷",
       "goals": 8
     },
     {
       "name": "Erling Braut Haaland",
+      "country_name": "Norway",
+      "country_code": "NOR",
+      "flag": "🇳🇴",
       "goals": 7
     },
     {
       "name": "Harry Edward Kane",
+      "country_name": "England",
+      "country_code": "ENG",
+      "flag": "🇬🇧",
       "goals": 6
     },
     {
       "name": "Jude Victor William Bellingham",
+      "country_name": "England",
+      "country_code": "ENG",
+      "flag": "🇬🇧",
       "goals": 6
     },
     {
       "name": "Masour Ousmane Dembele",
+      "country_name": "France",
+      "country_code": "FRA",
+      "flag": "🇫🇷",
       "goals": 5
     },
     {
       "name": "Julián Andrés Quinones",
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "flag": "🇲🇽",
       "goals": 4
     },
     {
       "name": "José Vinicius",
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "flag": "🇧🇷",
       "goals": 4
     },
     {
       "name": "Mikel Oyarzabal",
+      "country_name": "Spain",
+      "country_code": "ESP",
+      "flag": "🇪🇸",
       "goals": 4
     },
     {
       "name": "Ismaila Sarr",
+      "country_name": "Senegal",
+      "country_code": "SEN",
+      "flag": "🇸🇳",
       "goals": 4
     }
   ],
   "stats": {
     "total_matches": 104,
-    "completed": 100,
-    "scheduled": 4
+    "completed": 101,
+    "scheduled": 3,
+    "wc_winner_determined": true,
+    "top_scorer_names": [
+      "Lionel Andrés Messi",
+      "Kylian Mbappe"
+    ],
+    "wc_winner": "ESP"
   }
 }

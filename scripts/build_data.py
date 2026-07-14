@@ -200,6 +200,20 @@ def fetch_results() -> dict:
         teams = parse_csv(teams_text)
 
         result = build_results(matches, players, teams)
+
+        # Manual result injection (until GitHub dataset is updated)
+        if "FRA - ESP" not in result["matches"]:
+            result["matches"]["FRA - ESP"] = {
+                "home": "FRA", "away": "ESP",
+                "hg": 0, "ag": 2, "played": True,
+                "stage": "Semi-finals", "date": "2026-07-14",
+                "result_type": "Regular",
+            }
+            result["stats"]["completed"] += 1
+            result["stats"]["scheduled"] -= 1
+            result["stats"]["wc_winner_determined"] = True
+            result["stats"]["wc_winner"] = "ESP"
+
         from scrape_results import save_cache
         save_cache(result)
         return result
@@ -419,22 +433,20 @@ def compute_what_if(
         kicktipp_pending[name] = cnt
 
     wc_determined = results_meta.get("wc_winner_determined", False)
-    top_scorer_countries = set()
-    if top_scorers:
-        top_goal_count = top_scorers[0]["goals"]
-        top_scorer_countries = {
-            s.get("country_code", "")
-            for s in top_scorers
-            if s["goals"] == top_goal_count and s.get("country_code")
-        }
+    actual_wc_winner = results_meta.get("wc_winner", "")
+    scheduled = results_meta.get("scheduled", 0)
+    ts_determined = scheduled == 0
 
     bonus_eligible = {}
     for name in user_names:
         bp = bonus_preds.get(name, {})
         wc_pick = bp.get("wc_winner", "")
         ts_pick = bp.get("top_scorer", "")
-        wc_ok = not wc_determined
-        ts_ok = not top_scorer_countries or ts_pick in top_scorer_countries
+        if wc_determined:
+            wc_ok = wc_pick == actual_wc_winner
+        else:
+            wc_ok = True
+        ts_ok = not ts_determined
         bonus_eligible[name] = (10 if wc_ok else 0) + (10 if ts_ok else 0)
 
     points_possible = {}
