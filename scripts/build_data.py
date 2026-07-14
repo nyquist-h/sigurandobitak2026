@@ -417,41 +417,55 @@ def compute_what_if(
     bonus_preds: dict,
     top_scorers: list[dict],
 ) -> dict:
-    """For each user, compute points possible and status."""
+    """For each user, compute points possible and status.
+
+    points_possible = 12 (3 remaining games × 4 pts) + WC bonus + TS bonus
+    - WC bonus: 10 if user's pick can still win (ESP, ENG, ARG)
+    - TS bonus: 10 if user's pick is still alive OR currently tied for #1
+    """
     current = {}
     for name in user_names:
         current[name] = sum(points_per_stage.get(name, {}).get(s, 0) for s in STAGE_KEYS)
 
-    kicktipp_pending = {}
-    for name in user_names:
-        cnt = 0
-        for stage_key, stage_preds in predictions.items():
-            user_preds = stage_preds.get(name, {})
-            for mk, pv in user_preds.items():
-                if pv and pv not in ("-:-", "0:999") and mk not in results:
-                    cnt += 1
-        kicktipp_pending[name] = cnt
+    # Teams still alive in the tournament (can still win WC)
+    alive_teams = {"ESP", "ENG", "ARG"}
+
+    # Current top scorer goal count
+    top_goal_count = top_scorers[0]["goals"] if top_scorers else 0
+    # Country codes of players currently tied for #1 in goals
+    top_scorer_countries = {
+        s.get("country_code", "")
+        for s in top_scorers
+        if s["goals"] == top_goal_count
+    }
+    # Countries still possible for top scorer: alive teams OR tied for #1
+    ts_possible_countries = alive_teams | top_scorer_countries
 
     wc_determined = results_meta.get("wc_winner_determined", False)
     actual_wc_winner = results_meta.get("wc_winner", "")
-    scheduled = results_meta.get("scheduled", 0)
-    ts_determined = scheduled == 0
 
     bonus_eligible = {}
     for name in user_names:
         bp = bonus_preds.get(name, {})
         wc_pick = bp.get("wc_winner", "")
         ts_pick = bp.get("top_scorer", "")
+
+        # WC bonus: pick must be a team still alive
         if wc_determined:
             wc_ok = wc_pick == actual_wc_winner
         else:
-            wc_ok = True
-        ts_ok = not ts_determined
+            wc_ok = wc_pick in alive_teams
+
+        # TS bonus: pick country is still possible if team is alive OR player is tied for #1
+        ts_ok = ts_pick in ts_possible_countries
+
         bonus_eligible[name] = (10 if wc_ok else 0) + (10 if ts_ok else 0)
 
+    # Base: 3 remaining games × 4 pts = 12
+    base_remaining = 12
     points_possible = {}
     for name in user_names:
-        points_possible[name] = 4 * kicktipp_pending[name] + bonus_eligible[name]
+        points_possible[name] = base_remaining + bonus_eligible[name]
 
     sorted_users = sorted(user_names, key=lambda n: (-current[n], n))
     leader_current = current[sorted_users[0]] if sorted_users else 0
@@ -478,7 +492,6 @@ def compute_what_if(
         what_if[name] = {
             "current": current[name],
             "points_possible": points_possible[name],
-            "kicktipp_pending": kicktipp_pending[name],
             "max_possible": max_possible,
             "status": status,
             "verdict": verdict,
