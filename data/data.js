@@ -4797,10 +4797,10 @@ window.KICKTIPP = {
     "scheduled": 3,
     "wc_winner_determined": true,
     "top_scorer_names": [
-      "Lionel Andrés Messi",
-      "Kylian Mbappe"
+      "Kylian Mbappe",
+      "Lionel Andrés Messi"
     ],
     "wc_winner": "ESP"
   },
-  "export_date": "2026-07-15T00:27:45.833507"
+  "export_date": "2026-07-15T00:33:15.978641"
 };

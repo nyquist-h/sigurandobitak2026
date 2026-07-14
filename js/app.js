@@ -86,7 +86,9 @@ function renderStandings() {
     tbody.innerHTML = rows.map(r => {
         const acc = D.accuracy[r.user] || {};
         const winnerCount = (acc.correct_winner || 0) + (acc.winner_plus_diff || 0) + (acc.draw_pred_no_exact || 0);
-        const totalPlayed = acc.total_played || 0;
+        const totalPlayed = D.results_meta?.completed || 0;
+        const totalPredicted = acc.total_predicted || 0;
+        const noPrediction = totalPlayed - totalPredicted;
 
         return `<tr>
             <td><span class="rank-badge ${rankClass(r.rank)}">${r.rank}</span></td>
@@ -96,6 +98,7 @@ function renderStandings() {
             <td>${winnerCount}</td>
             <td>${acc.missed || 0}</td>
             <td>${totalPlayed}</td>
+            <td>${noPrediction > 0 ? noPrediction : '—'}</td>
         </tr>`;
     }).join('');
 }
