@@ -266,7 +266,7 @@ function renderWhatIf() {
     const scheduled = D.results_meta?.scheduled || 0;
     const explainer = $('#what-if-explainer');
     if (explainer) {
-        explainer.textContent = `${scheduled} tournament match${scheduled !== 1 ? 'es' : ''} remaining. "Points possible" shows the maximum points each player can still earn from their pending predictions plus any bonus points still available.`;
+        explainer.textContent = `${scheduled} tournament match${scheduled !== 1 ? 'es' : ''} remaining (12 pts max). "Points possible" shows 12 pts from remaining games plus up to 20 bonus pts (WC winner + top scorer) if the user's picks are still in contention.`;
     }
 
     grid.innerHTML = D.users.map(user => {
