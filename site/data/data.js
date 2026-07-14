@@ -4691,5 +4691,5 @@ window.KICKTIPP = {
     "completed": 100,
     "scheduled": 4
   },
-  "export_date": "2026-07-14T22:56:21.985238"
+  "export_date": "2026-07-14T23:15:06.004843"
 };

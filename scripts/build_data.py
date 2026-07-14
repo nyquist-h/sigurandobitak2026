@@ -179,57 +179,33 @@ def load_all_zips() -> dict:
 
 # ── Fetch match results ───────────────────────────────────────────────
 def fetch_results() -> dict:
-    """Download match results from GitHub dataset."""
+    """Download match results from GitHub dataset (with cache fallback)."""
     sys.path.insert(0, str(Path(__file__).parent))
-    from scrape_results import fetch_text, parse_csv
+    from scrape_results import build_results, fetch_text, load_cache, parse_csv
 
-    matches_text = fetch_text(
-        "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches_detailed.csv"
-    )
-    matches = parse_csv(matches_text)
+    try:
+        matches_text = fetch_text(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches_detailed.csv"
+        )
+        matches = parse_csv(matches_text)
 
-    players_text = fetch_text(
-        "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/player_stats.csv"
-    )
-    players = parse_csv(players_text)
+        players_text = fetch_text(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/player_stats.csv"
+        )
+        players = parse_csv(players_text)
 
-    results = {}
-    for m in matches:
-        home = m.get("home_fifa_code", "").strip()
-        away = m.get("away_fifa_code", "").strip()
-        if not home or not away:
-            continue
-        hs = m.get("home_score", "").strip()
-        as_ = m.get("away_score", "").strip()
-        if not hs or not as_:
-            continue
-        match_key = f"{home} - {away}"
-        results[match_key] = {
-            "home": home,
-            "away": away,
-            "hg": int(hs),
-            "ag": int(as_),
-            "played": True,
-            "stage": m.get("stage_name", ""),
-            "date": m.get("date", ""),
-            "result_type": m.get("result_type", "Regular"),
-        }
-
-    top_scorers = sorted(players, key=lambda p: int(p.get("goals", 0) or 0), reverse=True)[:10]
-    top_scorer_list = [
-        {"name": p["player_name"], "goals": int(p.get("goals", 0) or 0)}
-        for p in top_scorers
-    ]
-
-    return {
-        "matches": results,
-        "top_scorers": top_scorer_list,
-        "stats": {
-            "total_matches": len(matches),
-            "completed": sum(1 for m in matches if m.get("status") == "Completed"),
-            "scheduled": sum(1 for m in matches if m.get("status") == "Scheduled"),
-        },
-    }
+        result = build_results(matches, players)
+        # Save cache
+        from scrape_results import save_cache
+        save_cache(result)
+        return result
+    except Exception as e:
+        print(f"Download failed: {e}, trying cache...", file=sys.stderr)
+        cached = load_cache()
+        if cached:
+            print("Using cached results.", file=sys.stderr)
+            return cached
+        raise
 
 
 # ── Parse user predictions ────────────────────────────────────────────
