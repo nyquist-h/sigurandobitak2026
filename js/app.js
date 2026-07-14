@@ -75,7 +75,7 @@ function renderStandings() {
             case 'user': va = a.user; vb = b.user; break;
             case 'points': va = a.points; vb = b.points; break;
             case 'exact': va = D.accuracy[a.user]?.exact || 0; vb = D.accuracy[b.user]?.exact || 0; break;
-            case 'winner': va = (D.accuracy[a.user]?.correct_winner || 0) + (D.accuracy[a.user]?.winner_plus_diff || 0); vb = (D.accuracy[b.user]?.correct_winner || 0) + (D.accuracy[b.user]?.winner_plus_diff || 0); break;
+            case 'winner': va = (D.accuracy[a.user]?.correct_winner || 0) + (D.accuracy[a.user]?.winner_plus_diff || 0) + (D.accuracy[a.user]?.draw_pred_no_exact || 0); vb = (D.accuracy[b.user]?.correct_winner || 0) + (D.accuracy[b.user]?.winner_plus_diff || 0) + (D.accuracy[b.user]?.draw_pred_no_exact || 0); break;
             case 'missed': va = D.accuracy[a.user]?.missed || 0; vb = D.accuracy[b.user]?.missed || 0; break;
             default: va = a.points; vb = b.points;
         }
@@ -85,7 +85,8 @@ function renderStandings() {
 
     tbody.innerHTML = rows.map(r => {
         const acc = D.accuracy[r.user] || {};
-        const winnerCount = (acc.correct_winner || 0) + (acc.winner_plus_diff || 0);
+        const winnerCount = (acc.correct_winner || 0) + (acc.winner_plus_diff || 0) + (acc.draw_pred_no_exact || 0);
+        const totalPlayed = acc.total_played || 0;
 
         return `<tr>
             <td><span class="rank-badge ${rankClass(r.rank)}">${r.rank}</span></td>
@@ -94,6 +95,7 @@ function renderStandings() {
             <td>${acc.exact || 0}</td>
             <td>${winnerCount}</td>
             <td>${acc.missed || 0}</td>
+            <td>${totalPlayed}</td>
         </tr>`;
     }).join('');
 }
@@ -107,60 +109,6 @@ $$('th.sortable').forEach(th => {
         renderStandings();
     });
 });
-
-/* ── Time on 1st Place Chart ─────────────────────────────────────── */
-let timeOnTopChart;
-
-function renderTimeOnTop() {
-    if (!timeOnTopChart) {
-        timeOnTopChart = echarts.init($('#time-on-top-chart'), 'dark');
-    }
-
-    const data = Object.entries(D.time_on_top)
-        .sort((a, b) => b[1] - a[1]);
-
-    const accent = getAccentColor();
-
-    const option = {
-        backgroundColor: 'transparent',
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { type: 'shadow' },
-            formatter: p => `${p[0].name}: <b>${p[0].value.toFixed(1)}</b> stage${p[0].value !== 1 ? 's' : ''} on 1st place`
-        },
-        grid: { left: 120, right: 40, top: 20, bottom: 40 },
-        xAxis: {
-            type: 'value',
-            name: 'Stages',
-            nameTextStyle: { color: '#565f89' },
-            axisLabel: { color: '#9aa5ce' },
-            splitLine: { lineStyle: { color: '#414868' } }
-        },
-        yAxis: {
-            type: 'category',
-            data: data.map(d => d[0]).reverse(),
-            axisLabel: { color: '#c0caf5', fontWeight: 600 },
-            axisLine: { lineStyle: { color: '#414868' } }
-        },
-        series: [{
-            type: 'bar',
-            data: data.map(d => ({
-                value: d[1],
-                itemStyle: { color: accent }
-            })).reverse(),
-            barWidth: 20,
-            label: {
-                show: true,
-                position: 'right',
-                formatter: p => p.value.toFixed(1),
-                color: '#c0caf5',
-                fontSize: 12
-            }
-        }]
-    };
-
-    timeOnTopChart.setOption(option);
-}
 
 /* ── Points Race Chart ───────────────────────────────────────────── */
 let raceChart;
@@ -361,13 +309,11 @@ function renderWhatIf() {
 function init() {
     renderHero();
     renderStandings();
-    renderTimeOnTop();
     renderRace(0);
     renderQuality();
     renderWhatIf();
 
     window.addEventListener('resize', () => {
-        if (timeOnTopChart) timeOnTopChart.resize();
         if (raceChart) raceChart.resize();
     });
 }
