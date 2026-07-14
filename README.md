@@ -1,4 +1,4 @@
-# Kicktipp WC 2026 — Sigurando Bitak Dashboard
+# Kicktipp WC 2026 — Siguran Dobitak Dashboard
 
 Static GitHub Pages dashboard for the Kicktipp.de World Cup 2026 prediction league.
 
