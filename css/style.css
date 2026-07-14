@@ -333,6 +333,28 @@ body {
     margin-left: auto;
 }
 
+.race-select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: var(--font);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.race-select:hover, .race-select:focus {
+    border-color: var(--accent);
+}
+
+.race-select option {
+    background: var(--bg-card);
+    color: var(--text);
+}
+
 /* ── Prediction Quality ───────────────────────────────────────────── */
 .quality-grid {
     display: grid;
@@ -535,6 +557,39 @@ body {
     color: var(--danger);
     font-weight: 600;
 }
+
+/* ── Accuracy Donut in Quality Card ───────────────────────────────── */
+.quality-donut {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 8px;
+}
+
+.quality-donut-legend {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.quality-donut-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.quality-donut-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-exact { background: var(--success); }
+.dot-partial { background: var(--accent); }
+.dot-wrong { background: var(--danger); }
 
 /* ── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
