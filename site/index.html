@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kicktipp WC 2026 — Sigurando Bitak Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="data/data.js"></script>
+</head>
+<body>
+    <nav id="sidebar">
+        <div class="nav-brand">
+            <span class="nav-icon">⚽</span>
+            <span class="nav-title">Kicktipp WC 2026</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#standings">Standings</a></li>
+            <li><a href="#time-on-top">Time on 1st</a></li>
+            <li><a href="#race">Points Race</a></li>
+            <li><a href="#quality">Prediction Quality</a></li>
+            <li><a href="#what-if">What's Needed</a></li>
+            <li><a href="#bonus">Bonus Picks</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <header class="hero">
+            <h1>Sigurando Bitak 2026</h1>
+            <p class="hero-sub">FIFA World Cup Prediction League Dashboard</p>
+            <p class="hero-meta" id="export-date"></p>
+            <div class="hero-stats" id="hero-stats"></div>
+        </header>
+
+        <section id="standings" class="section">
+            <h2>Current Standings</h2>
+            <div class="card">
+                <table id="standings-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-col="rank">#</th>
+                            <th class="sortable" data-col="user">Player</th>
+                            <th class="sortable" data-col="points">Points</th>
+                            <th>Sparkline</th>
+                            <th class="sortable" data-col="exact">Exact</th>
+                            <th class="sortable" data-col="winner">Winner</th>
+                            <th class="sortable" data-col="missed">Missed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standings-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="time-on-top" class="section">
+            <h2>Time on 1st Place</h2>
+            <div class="card">
+                <div class="chart-controls">
+                    <label class="toggle">
+                        <input type="checkbox" id="tie-toggle" checked>
+                        <span class="toggle-label">Include ties (split credit)</span>
+                    </label>
+                </div>
+                <div id="time-on-top-chart" class="chart"></div>
+            </div>
+        </section>
+
+        <section id="race" class="section">
+            <h2>Points Over Time</h2>
+            <div class="card">
+                <div class="race-controls">
+                    <button id="race-play" class="btn btn-primary">▶ Play</button>
+                    <button id="race-pause" class="btn btn-secondary" disabled>⏸ Pause</button>
+                    <button id="race-reset" class="btn btn-secondary">↺ Reset</button>
+                    <span id="race-stage-label" class="race-label">Matchday 1</span>
+                </div>
+                <div id="race-chart" class="chart chart-tall"></div>
+            </div>
+        </section>
+
+        <section id="quality" class="section">
+            <h2>Prediction Quality</h2>
+            <div id="quality-grid" class="quality-grid"></div>
+        </section>
+
+        <section id="what-if" class="section">
+            <h2>What's Needed to Win</h2>
+            <div class="card">
+                <div class="chart-controls">
+                    <label class="toggle">
+                        <input type="checkbox" id="include-sf-final">
+                        <span class="toggle-label">Include Semi-finals + Final</span>
+                    </label>
+                </div>
+                <div id="what-if-grid" class="what-if-grid"></div>
+            </div>
+        </section>
+
+        <section id="bonus" class="section">
+            <h2>Bonus Predictions</h2>
+            <div class="card">
+                <div id="bonus-grid" class="bonus-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
