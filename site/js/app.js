@@ -25,6 +25,24 @@ function getAccentColor() {
 }
 
 /* ── Hero ─────────────────────────────────────────────────────────── */
+function animateCounter(element, target, duration = 1500) {
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (target - start) * eased);
+        element.textContent = current;
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+
 function renderHero() {
     const meta = D.results_meta;
     const scheduled = meta.scheduled || 0;
@@ -39,25 +57,37 @@ function renderHero() {
         </div>`
     ).join('');
 
+    const currentRankings = D.rankings[D.stages[D.stages.length - 1]] || [];
+    const leader = currentRankings[0];
+
     const stats = $('#hero-stats');
     stats.innerHTML = `
         <div class="hero-stat">
-            <div class="hero-stat-value">${D.users.length}</div>
+            <div class="hero-stat-value" id="counter-players">${D.users.length}</div>
             <div class="hero-stat-label">Players</div>
         </div>
         <div class="hero-stat">
-            <div class="hero-stat-value">${meta.completed}</div>
+            <div class="hero-stat-value" id="counter-matches">${meta.completed}</div>
             <div class="hero-stat-label">Matches Played</div>
         </div>
         <div class="hero-stat">
-            <div class="hero-stat-value">${scheduled}</div>
+            <div class="hero-stat-value" id="counter-left">${scheduled}</div>
             <div class="hero-stat-label">Matches Left</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-value" id="counter-leader">${leader?.points || 0}</div>
+            <div class="hero-stat-label">Leader Points</div>
         </div>
         <div class="hero-stat hero-stat-wide">
             <div class="scorers-label">Top Scorers</div>
             <div class="scorers-list">${scorersHtml}</div>
         </div>
     `;
+
+    animateCounter($('#counter-players'), D.users.length, 1000);
+    animateCounter($('#counter-matches'), meta.completed, 1200);
+    animateCounter($('#counter-left'), scheduled, 800);
+    animateCounter($('#counter-leader'), leader?.points || 0, 1500);
 }
 
 /* ── Standings Table ─────────────────────────────────────────────── */
@@ -117,6 +147,7 @@ $$('th.sortable').forEach(th => {
 let raceChart;
 let raceStageIndex = 0;
 let raceInterval = null;
+let raceSelectedPlayer = '';
 
 function renderRace(stageIdx) {
     if (!raceChart) {
@@ -129,6 +160,10 @@ function renderRace(stageIdx) {
     $('#race-stage-label').textContent = stage.label;
 
     const accent = getAccentColor();
+    const highlightColors = {
+        '': accent,
+    };
+    const highlightColor = '#f7768e';
 
     const option = {
         backgroundColor: 'transparent',
@@ -159,7 +194,9 @@ function renderRace(stageIdx) {
             type: 'bar',
             data: sorted.map(u => ({
                 value: u.points,
-                itemStyle: { color: accent }
+                itemStyle: {
+                    color: u.user === raceSelectedPlayer ? highlightColor : accent
+                }
             })).reverse(),
             barWidth: 24,
             label: {
@@ -176,6 +213,21 @@ function renderRace(stageIdx) {
 
     raceChart.setOption(option, true);
 }
+
+function populateRaceSelect() {
+    const select = $('#race-player-select');
+    D.users.forEach(user => {
+        const opt = document.createElement('option');
+        opt.value = user;
+        opt.textContent = user;
+        select.appendChild(opt);
+    });
+}
+
+$('#race-player-select').addEventListener('change', (e) => {
+    raceSelectedPlayer = e.target.value;
+    renderRace(raceStageIndex);
+});
 
 function startRace() {
     if (raceInterval) return;
@@ -211,6 +263,8 @@ $('#race-reset').addEventListener('click', () => {
 });
 
 /* ── Prediction Quality ───────────────────────────────────────────── */
+let qualityDonutCharts = [];
+
 function renderQuality() {
     const grid = $('#quality-grid');
     const currentRankings = D.rankings[D.stages[D.stages.length - 1]] || [];
@@ -230,6 +284,21 @@ function renderQuality() {
             <div class="quality-header">
                 <span class="quality-name">${user}</span>
                 <span class="quality-rank">Rank #${rank}</span>
+            </div>
+            <div class="quality-donut" id="donut-${user.replace(/[^a-zA-Z0-9]/g, '_')}"></div>
+            <div class="quality-donut-legend">
+                <div class="quality-donut-legend-item">
+                    <span class="quality-donut-dot dot-exact"></span>
+                    <span>Exact</span>
+                </div>
+                <div class="quality-donut-legend-item">
+                    <span class="quality-donut-dot dot-partial"></span>
+                    <span>Partial</span>
+                </div>
+                <div class="quality-donut-legend-item">
+                    <span class="quality-donut-dot dot-wrong"></span>
+                    <span>Wrong</span>
+                </div>
             </div>
             <div class="quality-stats">
                 <div class="quality-stat">
@@ -258,6 +327,48 @@ function renderQuality() {
             ` : ''}
         </div>`;
     }).join('');
+
+    qualityDonutCharts = [];
+    D.users.forEach(user => {
+        const sd = D.scoring_distribution[user] || {};
+        const exact = sd.exact || 0;
+        const partial = (sd.winner_plus_diff || 0) + (sd.draw_pred_no_exact || 0) + (sd.correct_winner || 0);
+        const wrong = sd.missed || 0;
+
+        const chartId = `donut-${user.replace(/[^a-zA-Z0-9]/g, '_')}`;
+        const chart = echarts.init(document.getElementById(chartId), 'dark');
+        qualityDonutCharts.push(chart);
+
+        const option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}: {c} ({d}%)'
+            },
+            series: [{
+                type: 'pie',
+                radius: ['50%', '75%'],
+                avoidLabelOverlap: false,
+                label: { show: false },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: 11,
+                        fontWeight: 'bold',
+                        color: '#c0caf5'
+                    }
+                },
+                labelLine: { show: false },
+                data: [
+                    { value: exact, name: 'Exact', itemStyle: { color: '#9ece6a' } },
+                    { value: partial, name: 'Partial', itemStyle: { color: '#7aa2f7' } },
+                    { value: wrong, name: 'Wrong', itemStyle: { color: '#f7768e' } }
+                ]
+            }]
+        };
+
+        chart.setOption(option, true);
+    });
 }
 
 /* ── What's Needed to Win ─────────────────────────────────────────── */
@@ -312,12 +423,14 @@ function renderWhatIf() {
 function init() {
     renderHero();
     renderStandings();
+    populateRaceSelect();
     renderRace(0);
     renderQuality();
     renderWhatIf();
 
     window.addEventListener('resize', () => {
         if (raceChart) raceChart.resize();
+        qualityDonutCharts.forEach(c => c.resize());
     });
 }
 

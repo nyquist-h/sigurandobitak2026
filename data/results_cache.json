@@ -1,6 +1,6 @@
 {
   "source": "https://github.com/mominullptr/FIFA-World-Cup-2026-Dataset",
-  "scraped_at": "2026-07-15T00:46:25.259563",
+  "scraped_at": "2026-07-15T01:05:24.517315",
   "matches": {
     "MEX - RSA": {
       "home": "MEX",
@@ -1091,8 +1091,8 @@
     "scheduled": 3,
     "wc_winner_determined": true,
     "top_scorer_names": [
-      "Lionel Andrés Messi",
-      "Kylian Mbappe"
+      "Kylian Mbappe",
+      "Lionel Andrés Messi"
     ],
     "wc_winner": "ESP"
   }

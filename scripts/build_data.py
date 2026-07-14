@@ -561,6 +561,20 @@ def main():
     print("Building race timeline...", file=sys.stderr)
     timeline = build_race_timeline(rankings, user_names)
 
+    print("Building scoring distributions...", file=sys.stderr)
+    scoring_distribution = {}
+    for name in user_names:
+        acc = accuracy.get(name, {})
+        scoring_distribution[name] = {
+            "exact": acc.get("exact", 0),
+            "winner_plus_diff": acc.get("winner_plus_diff", 0),
+            "draw_pred_no_exact": acc.get("draw_pred_no_exact", 0),
+            "correct_winner": acc.get("correct_winner", 0),
+            "missed": acc.get("missed", 0),
+            "total_predicted": acc.get("total_predicted", 0),
+            "total_played": acc.get("total_played", 0),
+        }
+
     output = {
         "users": user_names,
         "stages": STAGE_KEYS,
@@ -569,6 +583,7 @@ def main():
         "rankings": rankings,
         "time_on_top": time_on_top,
         "accuracy": accuracy,
+        "scoring_distribution": scoring_distribution,
         "bonus_points": bonus_points,
         "bonus_preds": bonus_preds,
         "what_if": what_if,

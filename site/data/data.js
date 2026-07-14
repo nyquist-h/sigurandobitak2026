@@ -2854,6 +2854,143 @@ window.KICKTIPP = {
       ]
     }
   },
+  "scoring_distribution": {
+    "Dzeko007": {
+      "exact": 16,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 3,
+      "correct_winner": 37,
+      "missed": 29,
+      "total_predicted": 99,
+      "total_played": 99
+    },
+    "BetMGM": {
+      "exact": 13,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 2,
+      "correct_winner": 36,
+      "missed": 35,
+      "total_predicted": 100,
+      "total_played": 100
+    },
+    "Dario": {
+      "exact": 9,
+      "winner_plus_diff": 12,
+      "draw_pred_no_exact": 5,
+      "correct_winner": 39,
+      "missed": 36,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "AiAiAi": {
+      "exact": 13,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 32,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "Zoki": {
+      "exact": 14,
+      "winner_plus_diff": 11,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 37,
+      "missed": 35,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "Nakamura": {
+      "exact": 11,
+      "winner_plus_diff": 8,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 41,
+      "missed": 36,
+      "total_predicted": 100,
+      "total_played": 100
+    },
+    "Jigglypuff": {
+      "exact": 10,
+      "winner_plus_diff": 8,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 40,
+      "missed": 39,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "Bajica": {
+      "exact": 12,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 42,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "Tadija": {
+      "exact": 8,
+      "winner_plus_diff": 12,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 39,
+      "missed": 38,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "kristian0s": {
+      "exact": 9,
+      "winner_plus_diff": 7,
+      "draw_pred_no_exact": 5,
+      "correct_winner": 40,
+      "missed": 35,
+      "total_predicted": 96,
+      "total_played": 96
+    },
+    "Vrbica": {
+      "exact": 10,
+      "winner_plus_diff": 9,
+      "draw_pred_no_exact": 3,
+      "correct_winner": 35,
+      "missed": 41,
+      "total_predicted": 98,
+      "total_played": 98
+    },
+    "ML10": {
+      "exact": 16,
+      "winner_plus_diff": 10,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 26,
+      "missed": 44,
+      "total_predicted": 100,
+      "total_played": 100
+    },
+    "ZloINaopako": {
+      "exact": 7,
+      "winner_plus_diff": 15,
+      "draw_pred_no_exact": 2,
+      "correct_winner": 32,
+      "missed": 43,
+      "total_predicted": 99,
+      "total_played": 99
+    },
+    "Nacelnik": {
+      "exact": 11,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 5,
+      "correct_winner": 32,
+      "missed": 48,
+      "total_predicted": 101,
+      "total_played": 101
+    },
+    "R7_Terminator": {
+      "exact": 2,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 2,
+      "correct_winner": 31,
+      "missed": 23,
+      "total_predicted": 63,
+      "total_played": 63
+    }
+  },
   "bonus_points": {
     "Dzeko007": 0,
     "BetMGM": 0,
@@ -4884,10 +5021,10 @@ window.KICKTIPP = {
     "scheduled": 3,
     "wc_winner_determined": true,
     "top_scorer_names": [
-      "Lionel Andrés Messi",
-      "Kylian Mbappe"
+      "Kylian Mbappe",
+      "Lionel Andrés Messi"
     ],
     "wc_winner": "ESP"
   },
-  "export_date": "2026-07-15T00:46:25.285743"
+  "export_date": "2026-07-15T01:05:24.528345"
 };
