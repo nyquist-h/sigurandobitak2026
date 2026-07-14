@@ -23,6 +23,8 @@ SITE_DATA.mkdir(parents=True, exist_ok=True)
 TEAM_ALIAS = {
     "CH": "SUI",
     "CUR": "CUW",
+    "SAR": "KSA",
+    "IRK": "IRQ",
     "CPV": "CPV",
     "CIV": "CIV",
     "COD": "COD",
@@ -131,11 +133,9 @@ def parse_csv_zip(zip_path: Path) -> list[dict]:
     with zipfile.ZipFile(zip_path) as z:
         name = z.namelist()[0]
         data = z.read(name).decode("utf-8")
-    # Use csv.DictReader with semicolon delimiter
     reader = csv.DictReader(io.StringIO(data), delimiter=";", quotechar='"')
     rows = []
     for row in reader:
-        # Strip whitespace from keys and values
         cleaned = {}
         for k, v in row.items():
             key = k.strip() if k else k
@@ -152,7 +152,7 @@ def load_all_zips() -> dict:
         "overview": None,
         "leaderboard": None,
         "bonus": None,
-        "predictions": {},  # stage_key -> rows
+        "predictions": {},
     }
 
     zips = sorted(ROOT.glob("*.csv.zip"))
@@ -194,8 +194,12 @@ def fetch_results() -> dict:
         )
         players = parse_csv(players_text)
 
-        result = build_results(matches, players)
-        # Save cache
+        teams_text = fetch_text(
+            "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/teams.csv"
+        )
+        teams = parse_csv(teams_text)
+
+        result = build_results(matches, players, teams)
         from scrape_results import save_cache
         save_cache(result)
         return result
@@ -226,9 +230,7 @@ def parse_predictions(data: dict) -> dict:
                 if col in ("Name", "PlayerID"):
                     continue
                 if " - " in col:
-                    # This is a match column
                     val = val.strip()
-                    # Normalize team codes in match key
                     parts = col.split(" - ")
                     if len(parts) == 2:
                         home_code = normalize_code(parts[0])
@@ -243,46 +245,31 @@ def parse_predictions(data: dict) -> dict:
 
 # ── Compute prediction accuracy ───────────────────────────────────────
 def compute_accuracy(predictions: dict, results: dict) -> dict:
-    """Compute per-user prediction accuracy stats.
-    Returns: {user_name: {
-        "exact": int, "exact_draw": int, "winner_plus_diff": int,
-        "draw_pred_no_exact": int, "correct_winner": int, "missed": int,
-        "total_predicted": int, "total_played": int,
-        "four_pointers": [{"match": "...", "predicted": "...", "actual": "..."}],
-    }}
-    """
+    """Compute per-user prediction accuracy stats."""
     stats = {}
 
     for stage_key, stage_preds in predictions.items():
         for user_name, user_preds in stage_preds.items():
             if user_name not in stats:
                 stats[user_name] = {
-                    "exact": 0,
-                    "exact_draw": 0,
-                    "winner_plus_diff": 0,
-                    "draw_pred_no_exact": 0,
-                    "correct_winner": 0,
-                    "missed": 0,
-                    "total_predicted": 0,
-                    "total_played": 0,
-                    "four_pointers": [],
+                    "exact": 0, "exact_draw": 0, "winner_plus_diff": 0,
+                    "draw_pred_no_exact": 0, "correct_winner": 0, "missed": 0,
+                    "total_predicted": 0, "total_played": 0, "four_pointers": [],
                 }
 
             for match_key, pred in user_preds.items():
-                # Skip empty, "-:-", "0:999" predictions
                 if not pred or pred in ("-:-", "0:999"):
                     continue
 
                 stats[user_name]["total_predicted"] += 1
 
                 if match_key not in results:
-                    continue  # match not played yet
+                    continue
 
                 result = results[match_key]
                 hg, ag = result["hg"], result["ag"]
                 stats[user_name]["total_played"] += 1
 
-                # Parse prediction
                 pred_match = re.match(r"(\d+):(\d+)", pred)
                 if not pred_match:
                     stats[user_name]["missed"] += 1
@@ -292,21 +279,16 @@ def compute_accuracy(predictions: dict, results: dict) -> dict:
                 pred_diff = ph - pa
                 real_diff = hg - ag
 
-                # Exact score
                 if ph == hg and pa == ag:
                     stats[user_name]["exact"] += 1
                     if hg == ag:
                         stats[user_name]["exact_draw"] += 1
                     stats[user_name]["four_pointers"].append({
-                        "match": match_key,
-                        "predicted": pred,
-                        "actual": f"{hg}:{ag}",
-                        "stage": stage_key,
+                        "match": match_key, "predicted": pred,
+                        "actual": f"{hg}:{ag}", "stage": stage_key,
                     })
-                # Draw predicted, no exact
                 elif hg == ag and ph == pa:
                     stats[user_name]["draw_pred_no_exact"] += 1
-                # Correct winner + goal difference (non-draw)
                 elif hg != ag and ph != pa:
                     if (pred_diff > 0 and real_diff > 0) or (pred_diff < 0 and real_diff < 0):
                         if abs(pred_diff) == abs(real_diff):
@@ -315,7 +297,6 @@ def compute_accuracy(predictions: dict, results: dict) -> dict:
                             stats[user_name]["correct_winner"] += 1
                     else:
                         stats[user_name]["missed"] += 1
-                # Correct winner only
                 elif (pred_diff > 0 and real_diff > 0) or (pred_diff < 0 and real_diff < 0):
                     stats[user_name]["correct_winner"] += 1
                 else:
@@ -326,12 +307,10 @@ def compute_accuracy(predictions: dict, results: dict) -> dict:
 
 # ── Parse overview data ───────────────────────────────────────────────
 def parse_overview(rows: list[dict]) -> tuple[list[str], dict, dict]:
-    """Parse general overview CSV.
-    Returns: (user_names, points_per_stage, bonus_points)
-    """
+    """Parse general overview CSV."""
     user_names = []
-    points_per_stage = {}  # {user: {stage: int}}
-    bonus_points = {}  # {user: int}
+    points_per_stage = {}
+    bonus_points = {}
 
     for row in rows:
         name = row.get("Name", "").strip()
@@ -368,21 +347,16 @@ def parse_bonus(rows: list[dict]) -> dict:
 
 # ── Compute stage rankings ────────────────────────────────────────────
 def compute_rankings(points_per_stage: dict, user_names: list[str]) -> dict:
-    """Compute cumulative rankings per stage.
-    Returns: {stage_key: [{user, rank, points, cumulative}]}
-    """
+    """Compute cumulative rankings per stage."""
     rankings = {}
     cumulative = {name: 0 for name in user_names}
 
     for stage_key in STAGE_KEYS:
-        # Update cumulative points
         for name in user_names:
             cumulative[name] += points_per_stage.get(name, {}).get(stage_key, 0)
 
-        # Sort by cumulative points (descending), then by name (ascending) for ties
         sorted_users = sorted(user_names, key=lambda n: (-cumulative[n], n))
 
-        # Assign ranks (handle ties)
         stage_rankings = []
         prev_points = None
         prev_rank = 0
@@ -395,9 +369,7 @@ def compute_rankings(points_per_stage: dict, user_names: list[str]) -> dict:
                 prev_rank = rank
             prev_points = pts
             stage_rankings.append({
-                "user": name,
-                "rank": rank,
-                "points": pts,
+                "user": name, "rank": rank, "points": pts,
                 "stage_points": points_per_stage.get(name, {}).get(stage_key, 0),
             })
 
@@ -412,7 +384,6 @@ def compute_time_on_top(rankings: dict, user_names: list[str]) -> dict:
     time_on_top = {name: 0.0 for name in user_names}
 
     for stage_key, stage_rankings in rankings.items():
-        # Find all users with rank 1
         first_place = [r for r in stage_rankings if r["rank"] == 1]
         if first_place:
             split = 1.0 / len(first_place)
@@ -423,62 +394,86 @@ def compute_time_on_top(rankings: dict, user_names: list[str]) -> dict:
 
 
 # ── Compute "what is needed to win" ───────────────────────────────────
-def compute_what_if(points_per_stage: dict, user_names: list[str], predictions: dict) -> dict:
-    """For each user, compute what's needed to win.
-    Compares against every user above them.
-    """
-    # Current total points per user
+def compute_what_if(
+    points_per_stage: dict,
+    user_names: list[str],
+    predictions: dict,
+    results: dict,
+    results_meta: dict,
+    bonus_preds: dict,
+    top_scorers: list[dict],
+) -> dict:
+    """For each user, compute points possible and status."""
     current = {}
     for name in user_names:
         current[name] = sum(points_per_stage.get(name, {}).get(s, 0) for s in STAGE_KEYS)
 
-    # Remaining matches per user (stages with predictions but no points yet)
-    remaining = {}
+    kicktipp_pending = {}
     for name in user_names:
-        count = 0
-        for stage_key in STAGE_KEYS:
-            pts = points_per_stage.get(name, {}).get(stage_key, 0)
-            if pts == 0:
-                # Check if user has predictions for this stage
-                stage_preds = predictions.get(stage_key, {})
-                user_preds = stage_preds.get(name, {})
-                # Count non-empty predictions
-                for mk, pv in user_preds.items():
-                    if pv and pv not in ("-:-", "0:999"):
-                        count += 1
-        remaining[name] = count
+        cnt = 0
+        for stage_key, stage_preds in predictions.items():
+            user_preds = stage_preds.get(name, {})
+            for mk, pv in user_preds.items():
+                if pv and pv not in ("-:-", "0:999") and mk not in results:
+                    cnt += 1
+        kicktipp_pending[name] = cnt
 
-    # Sort users by current points (descending)
+    wc_determined = results_meta.get("wc_winner_determined", False)
+    top_scorer_countries = set()
+    if top_scorers:
+        top_goal_count = top_scorers[0]["goals"]
+        top_scorer_countries = {
+            s.get("country_code", "")
+            for s in top_scorers
+            if s["goals"] == top_goal_count and s.get("country_code")
+        }
+
+    bonus_eligible = {}
+    for name in user_names:
+        bp = bonus_preds.get(name, {})
+        wc_pick = bp.get("wc_winner", "")
+        ts_pick = bp.get("top_scorer", "")
+        wc_ok = not wc_determined
+        ts_ok = not top_scorer_countries or ts_pick in top_scorer_countries
+        bonus_eligible[name] = (10 if wc_ok else 0) + (10 if ts_ok else 0)
+
+    points_possible = {}
+    for name in user_names:
+        points_possible[name] = 4 * kicktipp_pending[name] + bonus_eligible[name]
+
     sorted_users = sorted(user_names, key=lambda n: (-current[n], n))
+    leader_current = current[sorted_users[0]] if sorted_users else 0
 
     what_if = {}
     for name in user_names:
         above = [u for u in sorted_users if current[u] > current[name]]
-        max_possible = current[name] + 4 * remaining[name]
+        max_possible = current[name] + points_possible[name]
 
         if not above:
-            # Already leading
             status = "leading"
-            verdict = f"{name} is currently in the lead with {current[name]} points."
-        elif max_possible <= min(current[u] for u in above):
+            verdict = f"{name} is currently leading with {current[name]} points."
+        elif max_possible < leader_current:
             status = "eliminated"
-            verdict = f"{name} is mathematically eliminated. Max possible ({max_possible}) is less than the leader's current ({max(current[u] for u in above)})."
+            verdict = f"{name} is eliminated. Max possible ({max_possible}) cannot reach the leader ({leader_current})."
         else:
             status = "possible"
-            # Find the gap to each user above
             gaps = []
             for u in above:
                 gap = current[u] - current[name]
                 gaps.append(f"{u}: {gap} pts behind")
-            verdict = f"{name} needs {', '.join(gaps)}. Must score 4 pts in every remaining match ({remaining[name]} matches, max {4 * remaining[name]} pts) AND all users above must score 0."
+            verdict = f"{name} can still earn up to {points_possible[name]} points. {' '.join(gaps)}"
 
         what_if[name] = {
             "current": current[name],
-            "remaining_matches": remaining[name],
+            "points_possible": points_possible[name],
+            "kicktipp_pending": kicktipp_pending[name],
             "max_possible": max_possible,
             "status": status,
             "verdict": verdict,
-            "above_users": [{"user": u, "current": current[u], "remaining": remaining[u]} for u in above],
+            "above_users": [
+                {"user": u, "current": current[u], "points_possible": points_possible[u]}
+                for u in above
+            ],
         }
 
     return what_if
@@ -497,9 +492,7 @@ def build_race_timeline(rankings: dict, user_names: list[str]) -> list[dict]:
         }
         for r in stage_data:
             entry["users"].append({
-                "user": r["user"],
-                "points": r["points"],
-                "rank": r["rank"],
+                "user": r["user"], "points": r["points"], "rank": r["rank"],
             })
         timeline.append(entry)
     return timeline
@@ -514,6 +507,7 @@ def main():
     results_data = fetch_results()
     results = results_data["matches"]
     top_scorers = results_data["top_scorers"]
+    results_meta = results_data["stats"]
 
     print("Parsing predictions...", file=sys.stderr)
     predictions = parse_predictions(data)
@@ -534,12 +528,14 @@ def main():
     time_on_top = compute_time_on_top(rankings, user_names)
 
     print("Computing what-if scenarios...", file=sys.stderr)
-    what_if = compute_what_if(points_per_stage, user_names, predictions)
+    what_if = compute_what_if(
+        points_per_stage, user_names, predictions, results,
+        results_meta, bonus_preds, top_scorers,
+    )
 
     print("Building race timeline...", file=sys.stderr)
     timeline = build_race_timeline(rankings, user_names)
 
-    # ── Assemble output ───────────────────────────────────────────────
     output = {
         "users": user_names,
         "stages": STAGE_KEYS,
@@ -553,11 +549,10 @@ def main():
         "what_if": what_if,
         "timeline": timeline,
         "top_scorers": top_scorers,
-        "results_meta": results_data["stats"],
+        "results_meta": results_meta,
         "export_date": datetime.now().isoformat(),
     }
 
-    # Write data.js
     js_path = SITE_DATA / "data.js"
     with open(js_path, "w") as f:
         f.write("window.KICKTIPP = ")
@@ -569,10 +564,11 @@ def main():
     print(f"Stages: {len(STAGE_KEYS)}", file=sys.stderr)
     print(f"Results: {len(results)} matches", file=sys.stderr)
 
-    # Print summary
     print("\n=== TOP SCORERS ===", file=sys.stderr)
     for ts in top_scorers[:5]:
-        print(f"  {ts['name']}: {ts['goals']} goals", file=sys.stderr)
+        flag = ts.get("flag", "")
+        country = ts.get("country_name", "")
+        print(f"  {flag} {ts['name']} ({country}): {ts['goals']} goals", file=sys.stderr)
 
     print("\n=== TIME ON 1ST PLACE ===", file=sys.stderr)
     sorted_tot = sorted(time_on_top.items(), key=lambda x: -x[1])
@@ -582,7 +578,7 @@ def main():
     print("\n=== WHAT IF ===", file=sys.stderr)
     for name in user_names[:5]:
         wi = what_if[name]
-        print(f"  {name}: {wi['current']} pts, max {wi['max_possible']}, {wi['status']}", file=sys.stderr)
+        print(f"  {name}: {wi['current']} pts, +{wi['points_possible']} possible, max {wi['max_possible']}, {wi['status']}", file=sys.stderr)
 
 
 if __name__ == "__main__":
