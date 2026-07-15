@@ -218,6 +218,16 @@ body {
     padding: 24px;
 }
 
+.card-scroll {
+    padding: 0;
+    overflow: hidden;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    padding: 24px;
+}
+
 /* ── Standings Table ──────────────────────────────────────────────── */
 #standings-table {
     width: 100%;
