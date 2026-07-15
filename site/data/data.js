@@ -4980,6 +4980,13 @@ window.KICKTIPP = {
       "goals": 6
     },
     {
+      "name": "Mikel Oyarzabal",
+      "country_name": "Spain",
+      "country_code": "ESP",
+      "flag": "🇪🇸",
+      "goals": 5
+    },
+    {
       "name": "Masour Ousmane Dembele",
       "country_name": "France",
       "country_code": "FRA",
@@ -5001,13 +5008,6 @@ window.KICKTIPP = {
       "goals": 4
     },
     {
-      "name": "Mikel Oyarzabal",
-      "country_name": "Spain",
-      "country_code": "ESP",
-      "flag": "🇪🇸",
-      "goals": 4
-    },
-    {
       "name": "Ismaila Sarr",
       "country_name": "Senegal",
       "country_code": "SEN",
@@ -5019,12 +5019,11 @@ window.KICKTIPP = {
     "total_matches": 104,
     "completed": 101,
     "scheduled": 3,
-    "wc_winner_determined": true,
+    "wc_winner_determined": false,
     "top_scorer_names": [
       "Kylian Mbappe",
       "Lionel Andrés Messi"
-    ],
-    "wc_winner": "ESP"
+    ]
   },
-  "export_date": "2026-07-15T01:05:24.528345"
+  "export_date": "2026-07-15T06:09:55.100311"
 };

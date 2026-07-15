@@ -275,7 +275,7 @@ function renderQuality() {
         const acc = D.accuracy[user] || {};
         const rank = rankMap[user] || '—';
         const exact = acc.exact || 0;
-        const correctWinner = (acc.correct_winner || 0) + (acc.winner_plus_diff || 0);
+        const winnerCount = (acc.correct_winner || 0) + (acc.winner_plus_diff || 0) + (acc.draw_pred_no_exact || 0);
         const missed = acc.missed || 0;
 
         const fourPointers = acc.four_pointers || [];
@@ -306,7 +306,7 @@ function renderQuality() {
                     <div class="quality-stat-label">Exact</div>
                 </div>
                 <div class="quality-stat">
-                    <div class="quality-stat-value stat-winner">${correctWinner}</div>
+                    <div class="quality-stat-value stat-winner">${winnerCount}</div>
                     <div class="quality-stat-label">Winner</div>
                 </div>
                 <div class="quality-stat">
