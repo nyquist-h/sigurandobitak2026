@@ -34,6 +34,12 @@ let myPlayer = localStorage.getItem('kicktipp.myPlayer') || '';
 function setMyPlayer(user) {
     myPlayer = user;
     localStorage.setItem('kicktipp.myPlayer', user);
+    const raceSelect = $('#race-player-select');
+    if (raceSelect) {
+        raceSelect.value = user;
+        raceSelectedPlayer = user;
+        renderRace(raceStageIndex);
+    }
     applyMyHighlight();
 }
 
@@ -279,7 +285,7 @@ let raceSelectedPlayer = '';
 
 function renderRace(stageIdx) {
     if (!raceChart) {
-        raceChart = echarts.init($('#race-chart'), 'dark');
+        raceChart = echarts.init($('#race-chart'));
     }
 
     const stage = D.timeline[stageIdx];
@@ -294,7 +300,7 @@ function renderRace(stageIdx) {
     }
 
     const accent = getAccentColor();
-    const highlightColor = '#f7768e';
+    const highlightColor = '#ff3b30';
 
     const option = {
         backgroundColor: 'transparent',
@@ -307,19 +313,19 @@ function renderRace(stageIdx) {
         xAxis: {
             type: 'value',
             name: 'Points',
-            nameTextStyle: { color: '#565f89' },
-            axisLabel: { color: '#9aa5ce' },
-            splitLine: { lineStyle: { color: '#414868' } }
+            nameTextStyle: { color: '#86868b' },
+            axisLabel: { color: '#6e6e73' },
+            splitLine: { lineStyle: { color: '#e5e5ea' } }
         },
         yAxis: {
             type: 'category',
             data: sorted.map(u => u.user).reverse(),
             axisLabel: {
-                color: '#c0caf5',
+                color: '#1d1d1f',
                 fontWeight: 600,
                 fontSize: 13
             },
-            axisLine: { lineStyle: { color: '#414868' } }
+            axisLine: { lineStyle: { color: '#e5e5ea' } }
         },
         series: [{
             type: 'bar',
@@ -334,7 +340,7 @@ function renderRace(stageIdx) {
                 show: true,
                 position: 'right',
                 formatter: p => `${p.value} pts`,
-                color: '#c0caf5',
+                color: '#1d1d1f',
                 fontSize: 12
             },
             animationDuration: 500,
@@ -483,7 +489,7 @@ function renderQuality() {
         const wrong = sd.missed || 0;
 
         const chartId = `donut-${user.replace(/[^a-zA-Z0-9]/g, '_')}`;
-        const chart = echarts.init(document.getElementById(chartId), 'dark');
+        const chart = echarts.init(document.getElementById(chartId));
         qualityDonutCharts.push(chart);
 
         const option = {
@@ -502,14 +508,14 @@ function renderQuality() {
                         show: true,
                         fontSize: 11,
                         fontWeight: 'bold',
-                        color: '#c0caf5'
+                        color: '#1d1d1f'
                     }
                 },
                 labelLine: { show: false },
                 data: [
-                    { value: exact, name: 'Exact', itemStyle: { color: '#9ece6a' } },
-                    { value: partial, name: 'Partial', itemStyle: { color: '#7aa2f7' } },
-                    { value: wrong, name: 'Wrong', itemStyle: { color: '#f7768e' } }
+                    { value: exact, name: 'Exact', itemStyle: { color: '#34c759' } },
+                    { value: partial, name: 'Partial', itemStyle: { color: '#0071e3' } },
+                    { value: wrong, name: 'Wrong', itemStyle: { color: '#ff3b30' } }
                 ]
             }]
         };
