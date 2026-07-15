@@ -27,10 +27,23 @@
 
     <main id="content">
         <header class="hero">
-            <h1>Siguran Dobitak 2026</h1>
-            <p class="hero-sub">FIFA World Cup Prediction League Dashboard</p>
+            <div class="hero-top">
+                <div>
+                    <h1>Siguran Dobitak 2026</h1>
+                    <p class="hero-sub">FIFA World Cup Prediction League Dashboard</p>
+                </div>
+            </div>
             <p class="hero-meta" id="export-date"></p>
+            <div class="hero-chips" id="hero-chips"></div>
             <div class="hero-stats" id="hero-stats"></div>
+            <div class="hero-leader" id="hero-leader"></div>
+            <div class="scorers-scroll" id="scorers-scroll"></div>
+            <div class="my-stats-bar" id="my-stats-bar">
+                <span class="my-stats-label">View as</span>
+                <select id="my-stats-select" class="my-stats-select">
+                    <option value="">All Players</option>
+                </select>
+            </div>
         </header>
 
         <section id="standings" class="section">
@@ -40,18 +53,19 @@
                     <table id="standings-table">
                         <thead>
                             <tr>
-                                <th class="sortable" data-col="rank">#</th>
-                                <th class="sortable" data-col="user">Player</th>
-                                <th class="sortable" data-col="points">Points</th>
-                                <th class="sortable" data-col="exact">Exact</th>
-                                <th class="sortable" data-col="winner">Winner</th>
-                                <th class="sortable" data-col="missed">Missed</th>
+                                <th class="sortable" data-col="rank"># <span class="sort-arrow"></span></th>
+                                <th class="sortable" data-col="user">Player <span class="sort-arrow"></span></th>
+                                <th class="sortable" data-col="points">Points <span class="sort-arrow"></span></th>
+                                <th class="sortable" data-col="exact">Exact <span class="sort-arrow"></span></th>
+                                <th class="sortable" data-col="winner">Winner <span class="sort-arrow"></span></th>
+                                <th class="sortable" data-col="missed">Missed <span class="sort-arrow"></span></th>
                                 <th>Played</th>
                                 <th>No Prediction</th>
                             </tr>
                         </thead>
                         <tbody id="standings-body"></tbody>
                     </table>
+                    <ul class="standings-cards" id="standings-cards"></ul>
                 </div>
             </div>
         </section>
@@ -60,13 +74,20 @@
             <h2>Points Over Time</h2>
             <div class="card">
                 <div class="race-controls">
-                    <button id="race-play" class="btn btn-primary">▶ Play</button>
-                    <button id="race-pause" class="btn btn-secondary" disabled>⏸ Pause</button>
-                    <button id="race-reset" class="btn btn-secondary">↺ Reset</button>
-                    <select id="race-player-select" class="race-select">
-                        <option value="">All Players</option>
-                    </select>
-                    <span id="race-stage-label" class="race-label">Matchday 1</span>
+                    <div class="race-controls-row">
+                        <button id="race-play" class="btn btn-primary">▶ Play</button>
+                        <button id="race-pause" class="btn btn-secondary" disabled>⏸ Pause</button>
+                        <button id="race-reset" class="btn btn-secondary">↺ Reset</button>
+                    </div>
+                    <div class="race-controls-row">
+                        <select id="race-player-select" class="race-select">
+                            <option value="">All Players</option>
+                        </select>
+                        <div class="race-scrubber">
+                            <input type="range" id="race-scrubber" min="0" value="0" step="1">
+                        </div>
+                        <span id="race-stage-label" class="race-label">Matchday 1</span>
+                    </div>
                 </div>
                 <div id="race-chart" class="chart chart-tall"></div>
             </div>
@@ -81,10 +102,35 @@
             <h2>What's Needed to Win</h2>
             <div class="card">
                 <p class="section-explainer" id="what-if-explainer"></p>
+                <div class="what-if-tabs" id="what-if-tabs">
+                    <button class="what-if-tab active" data-filter="all">All</button>
+                    <button class="what-if-tab" data-filter="leading">Leading</button>
+                    <button class="what-if-tab" data-filter="possible">Possible</button>
+                    <button class="what-if-tab" data-filter="eliminated">Eliminated</button>
+                </div>
                 <div id="what-if-grid" class="what-if-grid"></div>
             </div>
         </section>
     </main>
+
+    <nav id="bottom-tabs">
+        <a href="#standings" class="tab-item active" data-section="standings">
+            <span class="tab-icon">🏆</span>
+            <span>Standings</span>
+        </a>
+        <a href="#race" class="tab-item" data-section="race">
+            <span class="tab-icon">📊</span>
+            <span>Race</span>
+        </a>
+        <a href="#quality" class="tab-item" data-section="quality">
+            <span class="tab-icon">🎯</span>
+            <span>Quality</span>
+        </a>
+        <a href="#what-if" class="tab-item" data-section="what-if">
+            <span class="tab-icon">🔮</span>
+            <span>What If</span>
+        </a>
+    </nav>
 
     <script src="js/app.js"></script>
 </body>

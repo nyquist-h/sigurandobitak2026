@@ -5025,5 +5025,5 @@ window.KICKTIPP = {
       "Lionel Andrés Messi"
     ]
   },
-  "export_date": "2026-07-15T06:09:55.100311"
+  "export_date": "2026-07-15T06:29:38.294624"
 };
