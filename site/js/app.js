@@ -583,15 +583,17 @@ function renderWhatIf() {
     applyMyHighlight();
 }
 
-/* What-if filter tabs */
-$$('.what-if-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        $$('.what-if-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        whatIfFilter = tab.dataset.filter;
-        renderWhatIf();
+/* What-if filter tabs — set up in init() after DOM is ready */
+function initWhatIfTabs() {
+    $$('.what-if-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            $$('.what-if-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            whatIfFilter = tab.dataset.filter;
+            renderWhatIf();
+        });
     });
-});
+}
 
 /* ── Scroll Spy for Bottom Tabs ─────────────────────────────────── */
 function initScrollSpy() {
@@ -630,6 +632,7 @@ function init() {
     renderRace(0);
     renderQuality();
     renderWhatIf();
+    initWhatIfTabs();
     initScrollSpy();
 
     window.addEventListener('resize', () => {
