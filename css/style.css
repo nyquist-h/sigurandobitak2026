@@ -437,6 +437,8 @@ body {
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     min-height: 42px;
+    position: relative;
+    z-index: 10;
 }
 
 .my-stats-select:hover, .my-stats-select:focus {
@@ -723,6 +725,8 @@ body {
     gap: 10px;
     margin-bottom: 14px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
 }
 
 .race-controls-row {
@@ -799,6 +803,8 @@ body {
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     min-height: 42px;
+    position: relative;
+    z-index: 10;
 }
 
 .race-select:hover, .race-select:focus {

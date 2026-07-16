@@ -1,14 +1,14 @@
 window.KICKTIPP = {
   "users": [
     "Dzeko007",
+    "AiAiAi",
     "BetMGM",
     "Dario",
-    "AiAiAi",
     "Zoki",
+    "Tadija",
     "Nakamura",
     "Jigglypuff",
     "Bajica",
-    "Tadija",
     "kristian0s",
     "Vrbica",
     "ML10",
@@ -68,6 +68,23 @@ window.KICKTIPP = {
       "sf": 0,
       "final": 0
     },
+    "AiAiAi": {
+      "md1": 7,
+      "md2": 7,
+      "md3": 17,
+      "md4": 10,
+      "md5": 10,
+      "md6": 23,
+      "md7": 7,
+      "md8": 11,
+      "md9": 8,
+      "md10": 19,
+      "r32": 28,
+      "r16": 12,
+      "qf": 6,
+      "sf": 4,
+      "final": 0
+    },
     "BetMGM": {
       "md1": 12,
       "md2": 7,
@@ -102,23 +119,6 @@ window.KICKTIPP = {
       "sf": 0,
       "final": 0
     },
-    "AiAiAi": {
-      "md1": 7,
-      "md2": 7,
-      "md3": 17,
-      "md4": 10,
-      "md5": 10,
-      "md6": 23,
-      "md7": 7,
-      "md8": 11,
-      "md9": 8,
-      "md10": 19,
-      "r32": 28,
-      "r16": 12,
-      "qf": 6,
-      "sf": 0,
-      "final": 0
-    },
     "Zoki": {
       "md1": 8,
       "md2": 7,
@@ -134,6 +134,23 @@ window.KICKTIPP = {
       "r16": 14,
       "qf": 8,
       "sf": 0,
+      "final": 0
+    },
+    "Tadija": {
+      "md1": 6,
+      "md2": 14,
+      "md3": 17,
+      "md4": 16,
+      "md5": 8,
+      "md6": 14,
+      "md7": 10,
+      "md8": 7,
+      "md9": 10,
+      "md10": 12,
+      "r32": 30,
+      "r16": 7,
+      "qf": 6,
+      "sf": 4,
       "final": 0
     },
     "Nakamura": {
@@ -184,23 +201,6 @@ window.KICKTIPP = {
       "r32": 28,
       "r16": 12,
       "qf": 8,
-      "sf": 0,
-      "final": 0
-    },
-    "Tadija": {
-      "md1": 6,
-      "md2": 14,
-      "md3": 17,
-      "md4": 16,
-      "md5": 8,
-      "md6": 14,
-      "md7": 10,
-      "md8": 7,
-      "md9": 10,
-      "md10": 12,
-      "r32": 30,
-      "r16": 7,
-      "qf": 6,
       "sf": 0,
       "final": 0
     },
@@ -269,7 +269,7 @@ window.KICKTIPP = {
       "r32": 21,
       "r16": 14,
       "qf": 5,
-      "sf": 0,
+      "sf": 2,
       "final": 0
     },
     "Nacelnik": {
@@ -1512,6 +1512,12 @@ window.KICKTIPP = {
         "stage_points": 0
       },
       {
+        "user": "AiAiAi",
+        "rank": 2,
+        "points": 169,
+        "stage_points": 4
+      },
+      {
         "user": "BetMGM",
         "rank": 2,
         "points": 169,
@@ -1519,14 +1525,8 @@ window.KICKTIPP = {
       },
       {
         "user": "Dario",
-        "rank": 3,
-        "points": 168,
-        "stage_points": 0
-      },
-      {
-        "user": "AiAiAi",
         "rank": 4,
-        "points": 165,
+        "points": 168,
         "stage_points": 0
       },
       {
@@ -1536,27 +1536,27 @@ window.KICKTIPP = {
         "stage_points": 0
       },
       {
-        "user": "Nakamura",
+        "user": "Tadija",
         "rank": 6,
+        "points": 161,
+        "stage_points": 4
+      },
+      {
+        "user": "Nakamura",
+        "rank": 7,
         "points": 159,
         "stage_points": 0
       },
       {
         "user": "Bajica",
-        "rank": 7,
+        "rank": 8,
         "points": 158,
         "stage_points": 0
       },
       {
         "user": "Jigglypuff",
-        "rank": 7,
+        "rank": 8,
         "points": 158,
-        "stage_points": 0
-      },
-      {
-        "user": "Tadija",
-        "rank": 9,
-        "points": 157,
         "stage_points": 0
       },
       {
@@ -1580,8 +1580,8 @@ window.KICKTIPP = {
       {
         "user": "ZloINaopako",
         "rank": 13,
-        "points": 144,
-        "stage_points": 0
+        "points": 146,
+        "stage_points": 2
       },
       {
         "user": "Nacelnik",
@@ -1604,6 +1604,12 @@ window.KICKTIPP = {
         "stage_points": 0
       },
       {
+        "user": "AiAiAi",
+        "rank": 2,
+        "points": 169,
+        "stage_points": 0
+      },
+      {
         "user": "BetMGM",
         "rank": 2,
         "points": 169,
@@ -1611,14 +1617,8 @@ window.KICKTIPP = {
       },
       {
         "user": "Dario",
-        "rank": 3,
-        "points": 168,
-        "stage_points": 0
-      },
-      {
-        "user": "AiAiAi",
         "rank": 4,
-        "points": 165,
+        "points": 168,
         "stage_points": 0
       },
       {
@@ -1628,27 +1628,27 @@ window.KICKTIPP = {
         "stage_points": 0
       },
       {
-        "user": "Nakamura",
+        "user": "Tadija",
         "rank": 6,
+        "points": 161,
+        "stage_points": 0
+      },
+      {
+        "user": "Nakamura",
+        "rank": 7,
         "points": 159,
         "stage_points": 0
       },
       {
         "user": "Bajica",
-        "rank": 7,
+        "rank": 8,
         "points": 158,
         "stage_points": 0
       },
       {
         "user": "Jigglypuff",
-        "rank": 7,
+        "rank": 8,
         "points": 158,
-        "stage_points": 0
-      },
-      {
-        "user": "Tadija",
-        "rank": 9,
-        "points": 157,
         "stage_points": 0
       },
       {
@@ -1672,7 +1672,7 @@ window.KICKTIPP = {
       {
         "user": "ZloINaopako",
         "rank": 13,
-        "points": 144,
+        "points": 146,
         "stage_points": 0
       },
       {
@@ -1691,14 +1691,14 @@ window.KICKTIPP = {
   },
   "time_on_top": {
     "Dzeko007": 9.5,
+    "AiAiAi": 0.0,
     "BetMGM": 2.333333333333333,
     "Dario": 0.0,
-    "AiAiAi": 0.0,
     "Zoki": 0.0,
+    "Tadija": 0.8333333333333333,
     "Nakamura": 0.3333333333333333,
     "Jigglypuff": 0.0,
     "Bajica": 0.0,
-    "Tadija": 0.8333333333333333,
     "kristian0s": 0.0,
     "Vrbica": 1.0,
     "ML10": 1.0,
@@ -1714,7 +1714,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 3,
       "correct_winner": 35,
       "missed": 41,
-      "total_predicted": 98,
+      "total_predicted": 99,
       "total_played": 98,
       "four_pointers": [
         {
@@ -1786,7 +1786,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 26,
       "missed": 44,
-      "total_predicted": 100,
+      "total_predicted": 101,
       "total_played": 100,
       "four_pointers": [
         {
@@ -1894,7 +1894,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 2,
       "correct_winner": 36,
       "missed": 35,
-      "total_predicted": 100,
+      "total_predicted": 101,
       "total_played": 100,
       "four_pointers": [
         {
@@ -1984,7 +1984,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 3,
       "correct_winner": 37,
       "missed": 29,
-      "total_predicted": 99,
+      "total_predicted": 100,
       "total_played": 99,
       "four_pointers": [
         {
@@ -2092,7 +2092,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 40,
       "missed": 35,
-      "total_predicted": 96,
+      "total_predicted": 97,
       "total_played": 96,
       "four_pointers": [
         {
@@ -2158,7 +2158,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 42,
       "missed": 38,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2242,7 +2242,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 41,
       "missed": 36,
-      "total_predicted": 100,
+      "total_predicted": 101,
       "total_played": 100,
       "four_pointers": [
         {
@@ -2320,7 +2320,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 32,
       "missed": 48,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2398,7 +2398,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 37,
       "missed": 35,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2494,7 +2494,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 40,
       "missed": 39,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2566,7 +2566,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 39,
       "missed": 36,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2632,7 +2632,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 32,
       "missed": 38,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2722,7 +2722,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 39,
       "missed": 38,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101,
       "four_pointers": [
         {
@@ -2782,7 +2782,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 2,
       "correct_winner": 32,
       "missed": 43,
-      "total_predicted": 99,
+      "total_predicted": 100,
       "total_played": 99,
       "four_pointers": [
         {
@@ -2861,8 +2861,17 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 3,
       "correct_winner": 37,
       "missed": 29,
-      "total_predicted": 99,
+      "total_predicted": 100,
       "total_played": 99
+    },
+    "AiAiAi": {
+      "exact": 13,
+      "winner_plus_diff": 14,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 32,
+      "missed": 38,
+      "total_predicted": 102,
+      "total_played": 101
     },
     "BetMGM": {
       "exact": 13,
@@ -2870,7 +2879,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 2,
       "correct_winner": 36,
       "missed": 35,
-      "total_predicted": 100,
+      "total_predicted": 101,
       "total_played": 100
     },
     "Dario": {
@@ -2879,16 +2888,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 39,
       "missed": 36,
-      "total_predicted": 101,
-      "total_played": 101
-    },
-    "AiAiAi": {
-      "exact": 13,
-      "winner_plus_diff": 14,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 32,
-      "missed": 38,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101
     },
     "Zoki": {
@@ -2897,34 +2897,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 37,
       "missed": 35,
-      "total_predicted": 101,
-      "total_played": 101
-    },
-    "Nakamura": {
-      "exact": 11,
-      "winner_plus_diff": 8,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 41,
-      "missed": 36,
-      "total_predicted": 100,
-      "total_played": 100
-    },
-    "Jigglypuff": {
-      "exact": 10,
-      "winner_plus_diff": 8,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 40,
-      "missed": 39,
-      "total_predicted": 101,
-      "total_played": 101
-    },
-    "Bajica": {
-      "exact": 12,
-      "winner_plus_diff": 5,
-      "draw_pred_no_exact": 4,
-      "correct_winner": 42,
-      "missed": 38,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101
     },
     "Tadija": {
@@ -2933,7 +2906,34 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 39,
       "missed": 38,
+      "total_predicted": 102,
+      "total_played": 101
+    },
+    "Nakamura": {
+      "exact": 11,
+      "winner_plus_diff": 8,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 41,
+      "missed": 36,
       "total_predicted": 101,
+      "total_played": 100
+    },
+    "Jigglypuff": {
+      "exact": 10,
+      "winner_plus_diff": 8,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 40,
+      "missed": 39,
+      "total_predicted": 102,
+      "total_played": 101
+    },
+    "Bajica": {
+      "exact": 12,
+      "winner_plus_diff": 5,
+      "draw_pred_no_exact": 4,
+      "correct_winner": 42,
+      "missed": 38,
+      "total_predicted": 102,
       "total_played": 101
     },
     "kristian0s": {
@@ -2942,7 +2942,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 40,
       "missed": 35,
-      "total_predicted": 96,
+      "total_predicted": 97,
       "total_played": 96
     },
     "Vrbica": {
@@ -2951,7 +2951,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 3,
       "correct_winner": 35,
       "missed": 41,
-      "total_predicted": 98,
+      "total_predicted": 99,
       "total_played": 98
     },
     "ML10": {
@@ -2960,7 +2960,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 4,
       "correct_winner": 26,
       "missed": 44,
-      "total_predicted": 100,
+      "total_predicted": 101,
       "total_played": 100
     },
     "ZloINaopako": {
@@ -2969,7 +2969,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 2,
       "correct_winner": 32,
       "missed": 43,
-      "total_predicted": 99,
+      "total_predicted": 100,
       "total_played": 99
     },
     "Nacelnik": {
@@ -2978,7 +2978,7 @@ window.KICKTIPP = {
       "draw_pred_no_exact": 5,
       "correct_winner": 32,
       "missed": 48,
-      "total_predicted": 101,
+      "total_predicted": 102,
       "total_played": 101
     },
     "R7_Terminator": {
@@ -2993,14 +2993,14 @@ window.KICKTIPP = {
   },
   "bonus_points": {
     "Dzeko007": 0,
+    "AiAiAi": 0,
     "BetMGM": 0,
     "Dario": 0,
-    "AiAiAi": 0,
     "Zoki": 0,
+    "Tadija": 0,
     "Nakamura": 0,
     "Jigglypuff": 0,
     "Bajica": 0,
-    "Tadija": 0,
     "kristian0s": 0,
     "Vrbica": 0,
     "ML10": 0,
@@ -3079,6 +3079,20 @@ window.KICKTIPP = {
       "verdict": "Dzeko007 is currently leading with 177 points.",
       "above_users": []
     },
+    "AiAiAi": {
+      "current": 169,
+      "points_possible": 22,
+      "max_possible": 191,
+      "status": "possible",
+      "verdict": "AiAiAi can still earn up to 22 points. Dzeko007: 8 pts behind",
+      "above_users": [
+        {
+          "user": "Dzeko007",
+          "current": 177,
+          "points_possible": 22
+        }
+      ]
+    },
     "BetMGM": {
       "current": 169,
       "points_possible": 22,
@@ -3098,7 +3112,7 @@ window.KICKTIPP = {
       "points_possible": 32,
       "max_possible": 200,
       "status": "possible",
-      "verdict": "Dario can still earn up to 32 points. Dzeko007: 9 pts behind BetMGM: 1 pts behind",
+      "verdict": "Dario can still earn up to 32 points. Dzeko007: 9 pts behind AiAiAi: 1 pts behind BetMGM: 1 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
@@ -3106,33 +3120,14 @@ window.KICKTIPP = {
           "points_possible": 22
         },
         {
-          "user": "BetMGM",
+          "user": "AiAiAi",
           "current": 169,
-          "points_possible": 22
-        }
-      ]
-    },
-    "AiAiAi": {
-      "current": 165,
-      "points_possible": 22,
-      "max_possible": 187,
-      "status": "possible",
-      "verdict": "AiAiAi can still earn up to 22 points. Dzeko007: 12 pts behind BetMGM: 4 pts behind Dario: 3 pts behind",
-      "above_users": [
-        {
-          "user": "Dzeko007",
-          "current": 177,
           "points_possible": 22
         },
         {
           "user": "BetMGM",
           "current": 169,
           "points_possible": 22
-        },
-        {
-          "user": "Dario",
-          "current": 168,
-          "points_possible": 32
         }
       ]
     },
@@ -3141,11 +3136,45 @@ window.KICKTIPP = {
       "points_possible": 32,
       "max_possible": 196,
       "status": "possible",
-      "verdict": "Zoki can still earn up to 32 points. Dzeko007: 13 pts behind BetMGM: 5 pts behind Dario: 4 pts behind AiAiAi: 1 pts behind",
+      "verdict": "Zoki can still earn up to 32 points. Dzeko007: 13 pts behind AiAiAi: 5 pts behind BetMGM: 5 pts behind Dario: 4 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
+          "user": "BetMGM",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
+          "user": "Dario",
+          "current": 168,
+          "points_possible": 32
+        }
+      ]
+    },
+    "Tadija": {
+      "current": 161,
+      "points_possible": 22,
+      "max_possible": 183,
+      "status": "possible",
+      "verdict": "Tadija can still earn up to 22 points. Dzeko007: 16 pts behind AiAiAi: 8 pts behind BetMGM: 8 pts behind Dario: 7 pts behind Zoki: 3 pts behind",
+      "above_users": [
+        {
+          "user": "Dzeko007",
+          "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3159,9 +3188,9 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
+          "user": "Zoki",
+          "current": 164,
+          "points_possible": 32
         }
       ]
     },
@@ -3170,11 +3199,16 @@ window.KICKTIPP = {
       "points_possible": 22,
       "max_possible": 181,
       "status": "possible",
-      "verdict": "Nakamura can still earn up to 22 points. Dzeko007: 18 pts behind BetMGM: 10 pts behind Dario: 9 pts behind AiAiAi: 6 pts behind Zoki: 5 pts behind",
+      "verdict": "Nakamura can still earn up to 22 points. Dzeko007: 18 pts behind AiAiAi: 10 pts behind BetMGM: 10 pts behind Dario: 9 pts behind Zoki: 5 pts behind Tadija: 2 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3188,14 +3222,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         }
       ]
     },
@@ -3204,11 +3238,16 @@ window.KICKTIPP = {
       "points_possible": 22,
       "max_possible": 180,
       "status": "possible",
-      "verdict": "Jigglypuff can still earn up to 22 points. Dzeko007: 19 pts behind BetMGM: 11 pts behind Dario: 10 pts behind AiAiAi: 7 pts behind Zoki: 6 pts behind Nakamura: 1 pts behind",
+      "verdict": "Jigglypuff can still earn up to 22 points. Dzeko007: 19 pts behind AiAiAi: 11 pts behind BetMGM: 11 pts behind Dario: 10 pts behind Zoki: 6 pts behind Tadija: 3 pts behind Nakamura: 1 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3222,14 +3261,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3243,11 +3282,16 @@ window.KICKTIPP = {
       "points_possible": 22,
       "max_possible": 180,
       "status": "possible",
-      "verdict": "Bajica can still earn up to 22 points. Dzeko007: 19 pts behind BetMGM: 11 pts behind Dario: 10 pts behind AiAiAi: 7 pts behind Zoki: 6 pts behind Nakamura: 1 pts behind",
+      "verdict": "Bajica can still earn up to 22 points. Dzeko007: 19 pts behind AiAiAi: 11 pts behind BetMGM: 11 pts behind Dario: 10 pts behind Zoki: 6 pts behind Tadija: 3 pts behind Nakamura: 1 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3261,67 +3305,18 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
         },
         {
-          "user": "Nakamura",
-          "current": 159,
+          "user": "Tadija",
+          "current": 161,
           "points_possible": 22
-        }
-      ]
-    },
-    "Tadija": {
-      "current": 157,
-      "points_possible": 22,
-      "max_possible": 179,
-      "status": "possible",
-      "verdict": "Tadija can still earn up to 22 points. Dzeko007: 20 pts behind BetMGM: 12 pts behind Dario: 11 pts behind AiAiAi: 8 pts behind Zoki: 7 pts behind Nakamura: 2 pts behind Bajica: 1 pts behind Jigglypuff: 1 pts behind",
-      "above_users": [
-        {
-          "user": "Dzeko007",
-          "current": 177,
-          "points_possible": 22
-        },
-        {
-          "user": "BetMGM",
-          "current": 169,
-          "points_possible": 22
-        },
-        {
-          "user": "Dario",
-          "current": 168,
-          "points_possible": 32
-        },
-        {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
-          "user": "Zoki",
-          "current": 164,
-          "points_possible": 32
         },
         {
           "user": "Nakamura",
           "current": 159,
-          "points_possible": 22
-        },
-        {
-          "user": "Bajica",
-          "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Jigglypuff",
-          "current": 158,
           "points_possible": 22
         }
       ]
@@ -3331,11 +3326,16 @@ window.KICKTIPP = {
       "points_possible": 22,
       "max_possible": 178,
       "status": "possible",
-      "verdict": "kristian0s can still earn up to 22 points. Dzeko007: 21 pts behind BetMGM: 13 pts behind Dario: 12 pts behind AiAiAi: 9 pts behind Zoki: 8 pts behind Nakamura: 3 pts behind Bajica: 2 pts behind Jigglypuff: 2 pts behind Tadija: 1 pts behind",
+      "verdict": "kristian0s can still earn up to 22 points. Dzeko007: 21 pts behind AiAiAi: 13 pts behind BetMGM: 13 pts behind Dario: 12 pts behind Zoki: 8 pts behind Tadija: 5 pts behind Nakamura: 3 pts behind Bajica: 2 pts behind Jigglypuff: 2 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3349,14 +3349,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3371,11 +3371,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         }
       ]
@@ -3393,6 +3388,11 @@ window.KICKTIPP = {
           "points_possible": 22
         },
         {
+          "user": "AiAiAi",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
           "user": "BetMGM",
           "current": 169,
           "points_possible": 22
@@ -3403,14 +3403,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3425,11 +3425,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         },
         {
@@ -3452,6 +3447,11 @@ window.KICKTIPP = {
           "points_possible": 22
         },
         {
+          "user": "AiAiAi",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
           "user": "BetMGM",
           "current": 169,
           "points_possible": 22
@@ -3462,14 +3462,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3484,11 +3484,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         },
         {
@@ -3504,15 +3499,20 @@ window.KICKTIPP = {
       ]
     },
     "ZloINaopako": {
-      "current": 144,
+      "current": 146,
       "points_possible": 32,
-      "max_possible": 176,
-      "status": "eliminated",
-      "verdict": "ZloINaopako is eliminated. Max possible (176) cannot reach the leader (177).",
+      "max_possible": 178,
+      "status": "possible",
+      "verdict": "ZloINaopako can still earn up to 32 points. Dzeko007: 31 pts behind AiAiAi: 23 pts behind BetMGM: 23 pts behind Dario: 22 pts behind Zoki: 18 pts behind Tadija: 15 pts behind Nakamura: 13 pts behind Bajica: 12 pts behind Jigglypuff: 12 pts behind kristian0s: 10 pts behind Vrbica: 8 pts behind ML10: 6 pts behind",
       "above_users": [
         {
           "user": "Dzeko007",
           "current": 177,
+          "points_possible": 22
+        },
+        {
+          "user": "AiAiAi",
+          "current": 169,
           "points_possible": 22
         },
         {
@@ -3526,14 +3526,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3548,11 +3548,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         },
         {
@@ -3585,6 +3580,11 @@ window.KICKTIPP = {
           "points_possible": 22
         },
         {
+          "user": "AiAiAi",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
           "user": "BetMGM",
           "current": 169,
           "points_possible": 22
@@ -3595,14 +3595,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3617,11 +3617,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         },
         {
@@ -3641,7 +3636,7 @@ window.KICKTIPP = {
         },
         {
           "user": "ZloINaopako",
-          "current": 144,
+          "current": 146,
           "points_possible": 32
         }
       ]
@@ -3659,6 +3654,11 @@ window.KICKTIPP = {
           "points_possible": 22
         },
         {
+          "user": "AiAiAi",
+          "current": 169,
+          "points_possible": 22
+        },
+        {
           "user": "BetMGM",
           "current": 169,
           "points_possible": 22
@@ -3669,14 +3669,14 @@ window.KICKTIPP = {
           "points_possible": 32
         },
         {
-          "user": "AiAiAi",
-          "current": 165,
-          "points_possible": 22
-        },
-        {
           "user": "Zoki",
           "current": 164,
           "points_possible": 32
+        },
+        {
+          "user": "Tadija",
+          "current": 161,
+          "points_possible": 22
         },
         {
           "user": "Nakamura",
@@ -3691,11 +3691,6 @@ window.KICKTIPP = {
         {
           "user": "Jigglypuff",
           "current": 158,
-          "points_possible": 22
-        },
-        {
-          "user": "Tadija",
-          "current": 157,
           "points_possible": 22
         },
         {
@@ -3715,7 +3710,7 @@ window.KICKTIPP = {
         },
         {
           "user": "ZloINaopako",
-          "current": 144,
+          "current": 146,
           "points_possible": 32
         },
         {
@@ -4790,6 +4785,11 @@ window.KICKTIPP = {
           "rank": 1
         },
         {
+          "user": "AiAiAi",
+          "points": 169,
+          "rank": 2
+        },
+        {
           "user": "BetMGM",
           "points": 169,
           "rank": 2
@@ -4797,11 +4797,6 @@ window.KICKTIPP = {
         {
           "user": "Dario",
           "points": 168,
-          "rank": 3
-        },
-        {
-          "user": "AiAiAi",
-          "points": 165,
           "rank": 4
         },
         {
@@ -4810,24 +4805,24 @@ window.KICKTIPP = {
           "rank": 5
         },
         {
+          "user": "Tadija",
+          "points": 161,
+          "rank": 6
+        },
+        {
           "user": "Nakamura",
           "points": 159,
-          "rank": 6
+          "rank": 7
         },
         {
           "user": "Bajica",
           "points": 158,
-          "rank": 7
+          "rank": 8
         },
         {
           "user": "Jigglypuff",
           "points": 158,
-          "rank": 7
-        },
-        {
-          "user": "Tadija",
-          "points": 157,
-          "rank": 9
+          "rank": 8
         },
         {
           "user": "kristian0s",
@@ -4846,7 +4841,7 @@ window.KICKTIPP = {
         },
         {
           "user": "ZloINaopako",
-          "points": 144,
+          "points": 146,
           "rank": 13
         },
         {
@@ -4871,6 +4866,11 @@ window.KICKTIPP = {
           "rank": 1
         },
         {
+          "user": "AiAiAi",
+          "points": 169,
+          "rank": 2
+        },
+        {
           "user": "BetMGM",
           "points": 169,
           "rank": 2
@@ -4878,11 +4878,6 @@ window.KICKTIPP = {
         {
           "user": "Dario",
           "points": 168,
-          "rank": 3
-        },
-        {
-          "user": "AiAiAi",
-          "points": 165,
           "rank": 4
         },
         {
@@ -4891,24 +4886,24 @@ window.KICKTIPP = {
           "rank": 5
         },
         {
+          "user": "Tadija",
+          "points": 161,
+          "rank": 6
+        },
+        {
           "user": "Nakamura",
           "points": 159,
-          "rank": 6
+          "rank": 7
         },
         {
           "user": "Bajica",
           "points": 158,
-          "rank": 7
+          "rank": 8
         },
         {
           "user": "Jigglypuff",
           "points": 158,
-          "rank": 7
-        },
-        {
-          "user": "Tadija",
-          "points": 157,
-          "rank": 9
+          "rank": 8
         },
         {
           "user": "kristian0s",
@@ -4927,7 +4922,7 @@ window.KICKTIPP = {
         },
         {
           "user": "ZloINaopako",
-          "points": 144,
+          "points": 146,
           "rank": 13
         },
         {
@@ -5025,5 +5020,5 @@ window.KICKTIPP = {
       "Lionel Andrés Messi"
     ]
   },
-  "export_date": "2026-07-15T06:29:38.294624"
+  "export_date": "2026-07-16T07:00:18.528059"
 };
